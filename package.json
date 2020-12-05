@@ -1,0 +1,38 @@
+{
+  "name": "ianwalter",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/ianwalter.git"
+  },
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ianwalter/ianwalter/issues"
+  },
+  "homepage": "https://github.com/ianwalter/ianwalter#readme",
+  "devDependencies": {
+    "@ianwalter/eslint-config": "^6.0.0",
+    "@ianwalter/renovate-config": "^1.4.2"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.0.2",
+    "@emotion/react": "^11.1.1",
+    "@emotion/styled": "^11.0.0",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.3",
+    "framer-motion": "^2.9.5",
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
