@@ -1,0 +1,19 @@
+# Spotlight on vuex-reset
+
+Vuex makes it easy to manage the app-wide state for a Vue.js application, but
+there is no built-in way to easily reset that state to it’s initial value.
+That’s where vuex-reset comes in. It’s a small Vuex plugin that will allow you
+to reset a store and/or store module(s) to it’s initial state by calling a
+special reset mutation.
+
+At binx health we're always trying to think of ways we can prevent leaking user
+information. We use vuex-reset to clear user information after it’s not needed
+anymore, like when a customer has finished placing an order or has logged out.
+Although that data is not accessible outside of our application, clearing that
+data provides a secondary safeguard around leaking that information in ways we
+did not intend.
+
+Security isn’t the only use-case, though. The utility is generally useful
+whenever you need to reset state without having to write more code to do so.
+Let's look at an example in which a form has it's fields bound to a Vuex
+module's state:
