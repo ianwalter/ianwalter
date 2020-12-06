@@ -1,0 +1,199 @@
+import CodeCaption from '../../components/CodeCaption.js'
+
+# Spotlight on decision-tree
+
+I created [decision-tree](https://github.com/ianwalter/decision-tree) because I
+was creating a sort of online quiz and I wanted an abstraction to keep track of
+state as the user completed questions. With decision-tree, you can create a
+tree-like structure in which answers to questions determine which question or
+result is shown next as the user continues through the quiz. As the path
+(or branch) is constructed, it is stored so that the application can know how
+the user arrived at a result or allow them to backtrack if necessary.
+
+Let’s take a look at an example. First, we need to construct the tree which
+consists of objects representing questions, options, and results. I apologize in
+advance for how geeky this example is:
+
+```js
+const decisionTree = new DecisionTree({
+  key: 'attribute',
+  title: 'What is your greatest attribute?',
+  options: [
+    {
+      key: 'S',
+      label: 'Strength',
+      leadsTo: 'proficiency'
+    },
+    {
+      key: 'I',
+      label: 'Intelligence',
+      leadsTo: 'spells'
+    },
+    {
+      key: 'D',
+      label: 'Dexterity',
+      leadsTo: 'proficiency'
+    },
+    {
+      key: 'C',
+      label: 'Charisma',
+      leadsTo: 'bard'
+    }
+  ],
+  children: [
+    {
+      key: 'spells',
+      title: 'What are your preffered type of spells?',
+      options: [
+        {
+          key: 'damage',
+          label: 'Damage',
+          leadsTo: 'mage'
+        },
+        {
+          key: 'healing',
+          label: 'Healing',
+          leadsTo: 'cleric'
+        }
+      ],
+      children: [
+        {
+          key: 'mage',
+          title: 'Mage',
+          description: `
+            You are a powerful mage, hurling fireballs at your foes!
+          `
+        },
+        {
+          key: 'cleric',
+          title: 'Cleric',
+          description: `
+            You are a knowledgeable cleric, saving your friends by casting
+            spells to heal them.
+          `
+        }
+      ]
+    },
+    {
+      key: 'proficiency',
+      title: 'What type of weapon are you most proficient with?',
+      options: [
+        {
+          key: 'swords',
+          label: 'Swords',
+          leadsTo: dt => {
+            if (dt.state.attribute === 'D') {
+              return 'thief'
+            } else {
+              return 'fighter'
+            }
+          }
+        },
+        {
+          key: 'bows',
+          label: 'Bows',
+          leadsTo: 'ranger'
+        }
+      ],
+      children: [
+        {
+          key: 'fighter',
+          title: 'Fighter',
+          description: `
+            You are a strong fighter, using your sword to cut down those who
+            stand in your way!
+          `
+        },
+        {
+          key: 'thief',
+          title: 'Thief',
+          description: `
+            You are a dexterous thief, piercing enemies before they even
+            know what hit them.
+          `
+        },
+        {
+          key: 'ranger',
+          title: 'Ranger',
+          description: `
+            You are a skilled ranger, felling combatants with your arrows.
+          `
+        }
+      ]
+    },
+    {
+      key: 'bard',
+      title: 'Bard',
+      description: `
+        You are a talented bard, inspiring your party with heroic ballads.
+      `
+    }
+  ]
+})
+```
+
+<CodeCaption>
+  decision-tree instance
+</CodeCaption>
+
+Once a decision-tree instance is created, we can navigate it by setting answers
+to questions and calling `next` like:
+
+`Initial tree navigation`
+
+```js
+decisionTree.set('attribute', 'D').next()
+const result = decisionTree.set('proficiency', 'swords').next()
+```
+
+In this example, if the node returned by `next` has no `leadsTo` property we can
+assume that we've reached a result. In the navigation above, we would have
+arrived at the result:
+
+`Initial result`
+
+```js
+{
+  key: 'thief',
+  title: 'Thief',
+  description: `
+    You are a dexterous thief, piercing enemies before they even
+    know what hit them.
+  `
+}
+```
+
+If we wanted to arrive at a different result, we can call `prev` to go back to
+the previous question and change our answer like:
+
+`Changing our response to the previous question`
+
+```js
+decisionTree.prev()
+const result = decisionTree.set('proficiency', 'bows').next()
+```
+
+Now our result would be:
+
+```js
+{
+  key: 'ranger',
+  title: 'Ranger',
+  description: `
+    You are a skilled ranger, felling combatants with your arrows.
+  `
+}
+```
+
+`New result`
+
+You can see decision-tree in action at the binx health website where it’s being
+used to power Find My Test, an assessment that helps people determine what kind
+of sexually-transmitted infection (STI) testing is suited for them:
+
+[https://app.mybinxhealth.com/find-my-test](https://app.mybinxhealth.com/find-my-test)
+
+I hope this article was helpful in explaining how you would use decision-tree.
+If you find this utility useful, please
+[star it on GitHub](https://github.com/ianwalter/decision-tree) and consider
+[sponsoring me](https://github.com/sponsors/ianwalter)!

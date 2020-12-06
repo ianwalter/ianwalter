@@ -8,7 +8,7 @@ export default function Header () {
 
       <NextLink href="/">
         <a>
-          <Heading as="h1" fontSize="2xl" className="text-gradient">
+          <Heading as="h1" fontSize="2xl" color="green.200">
             Ian Walter
           </Heading>
         </a>
