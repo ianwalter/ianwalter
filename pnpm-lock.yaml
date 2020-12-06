@@ -8,6 +8,7 @@ dependencies:
   next: 10.0.3_react-dom@17.0.1+react@17.0.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-icons: 4.1.0_react@17.0.1
 devDependencies:
   '@ianwalter/eslint-config': 6.0.0
   '@ianwalter/renovate-config': 1.4.2
@@ -1299,11 +1300,12 @@ packages:
   /@reach/auto-id/0.11.0_react-dom@17.0.1+react@17.0.1:
     dependencies:
       '@reach/utils': 0.11.0_react-dom@17.0.1+react@17.0.1
+      react: 17.0.1
       react-dom: 17.0.1_react@17.0.1
       tslib: 2.0.3
     dev: false
     peerDependencies:
-      react: '*'
+      react: ^16.8.0
       react-dom: ^16.8.0
     resolution:
       integrity: sha512-KwwnsnYTbTsYvRbSNqtaA1znaXP9G1I0z+bE0eFMNICvR+bHApaTu0aEEZNXfevq2LBrIMP6hZY9BokgTRcB3g==
@@ -5392,6 +5394,14 @@ packages:
       react: ^16.8.0
     resolution:
       integrity: sha512-c5ZP56KSpj9EAxzScTqQO7bQQNPltf/W1ZEBDqNDOV1XOIwvAyHX0O7db9ekiAtxyKgnqZjQlLppVg94fUeL9w==
+  /react-icons/4.1.0_react@17.0.1:
+    dependencies:
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      react: '*'
+    resolution:
+      integrity: sha512-FCXBg1JbbR0vWALXIxmFAfozHdVIJmmwCD81Jk0EKOt7Ax4AdBNcaRkWhR0NaKy9ugJgoY3fFvo0PHpte55pXg==
   /react-is/16.13.1:
     dev: false
     resolution:
@@ -6920,3 +6930,4 @@ specifiers:
   next: ^10.0.3
   react: ^17.0.1
   react-dom: ^17.0.1
+  react-icons: ^4.1.0
