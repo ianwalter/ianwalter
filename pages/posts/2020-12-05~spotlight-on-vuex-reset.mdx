@@ -1,24 +1,27 @@
+import Image from 'next/image'
+
 # Spotlight on vuex-reset
 
-[Vuex](https://vuex.vuejs.org/) makes it easy to manage the app-wide state for a
-[Vue.js](https://vuejs.org) application, but there is no built-in way to easily
-reset that state to it’s initial value. That’s where
+[Vuex](https://vuex.vuejs.org/) makes it easy to manage the app-wide state for
+a [Vue.js](https://vuejs.org) application, but there is no built-in way to
+easily reset that state to it’s initial value. That’s where
 [vuex-reset](https://github.com/ianwalter/vuex-reset) comes in. It’s a small
 Vuex plugin that will allow you to reset a store and/or store module(s) to it’s
 initial state by calling a special reset mutation.
 
-At binx health we're always trying to think of ways we can prevent leaking user
-information. We use vuex-reset to clear user information after it’s not needed
-anymore, like when a customer has finished placing an order or has logged out.
-Although that data is not accessible outside of our application, clearing that
-data provides a secondary safeguard around leaking that information in ways we
-did not intend.
+At [binx health](https://mybinxhealth.com) we're always trying to think of ways
+we can prevent leaking user information. We use vuex-reset to clear user
+information after it’s not needed anymore, like when a customer has finished
+placing an order or has logged out. Although that data is not accessible outside
+of our application, clearing that data provides a secondary safeguard around
+leaking that information in ways we did not intend.
 
 Security isn’t the only use-case, though. The utility is generally useful
 whenever you need to reset state without having to write more code to do so.
 Let's look at an example in which a form has it's fields bound to a Vuex
 module's state:
 
+`store.js`
 ```js
 import Vuex from 'vuex'
 import VuexReset from '@ianwalter/vuex-reset'
@@ -54,3 +57,43 @@ export default new Vuex.Store({
   }
 })
 ```
+
+`NewColorScheme.vue`
+```js
+export default {
+  data () {
+    // Copy the color scheme stored in the Vuex module to the
+    // component's data so it can be used as the default value
+    // in the imaginary New Color Scheme form.
+    return { colorScheme: this.$store.state.colorScheme }
+    },
+    methods: {
+    save () {
+      // Save the new color scheme values from the imaginary New
+      // Color Scheme form to the store.
+      this.$store.commit('colorScheme/save', this.colorScheme)
+    },
+    reset () {
+      // Reset the color scheme to the initial 'Default' color scheme.
+      this.$store.commit('colorScheme/reset')
+    }
+  }
+}
+```
+
+When a user first navigates to the imaginary New Color Scheme form in the
+`NewColorScheme.vue` component the default values will be the initial values in
+the Vuex `colorScheme` module. They can then modify the name and colors of the
+color scheme and click a save button which would save those updated values to
+the store. If they ever wanted to reset those values to the `Default` color
+scheme, they could hit a reset button which would call the colorScheme `reset`
+mutation and vuex-reset would restore the initial color scheme. Check out a demo
+(of a different example) here:
+
+[https://vuex-reset.ianwalter.dev](https://vuex-reset.ianwalter.dev)
+
+I hope this article was helpful in explaining what vuex-reset is and why you
+would want to use it. If you find this utility useful, please
+[star it on GitHub](https://github.com/ianwalter/vuex-reset) and consider
+[sponsoring me](https://github.com/sponsors/ianwalter)!
+

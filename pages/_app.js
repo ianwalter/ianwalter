@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { MDXProvider } from '@mdx-js/react'
-import { Heading, Box, Link } from '@chakra-ui/react'
+import { Heading, Box, Link, Code } from '@chakra-ui/react'
 import theme from '../theme.js'
 import Layout from '../components/Layout.js'
 
@@ -14,7 +14,16 @@ const components = {
   },
   h1: props => <Heading as="h1" my={8} {...props} />,
   p: props => <Box as="p" my={6} {...props} />,
-  a: props => <Link color="blue.200" fontWeight="medium" {...props} />
+  a: props => <Link color="blue.200" fontWeight="medium" {...props} />,
+  inlineCode: props => (
+    <Code
+      colorScheme="purple"
+      fontSize="md"
+      borderRadius={3}
+      px={2}
+      {...props}
+    />
+  )
 }
 
 export default function App ({ Component, pageProps }) {
