@@ -6,11 +6,11 @@ const withMDX = require('@next/mdx')({
     rehypePlugins: [require('@mapbox/rehype-prism')]
   }
 })
+const deconstructFilename = require('./lib/deconstructFilename')
 
-function toRewrite (file) {
-  const filename = file.split('.')[0]
-  const slug = filename.split('~')[1]
-  return { source: `/${slug}`, destination: `/posts/${filename}`  }
+function toRewrite (filename) {
+  const { file, slug } = deconstructFilename(filename)
+  return { source: `/${slug}`, destination: `/posts/${file}` }
 }
 
 module.exports = withMDX({
