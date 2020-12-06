@@ -13,6 +13,7 @@ export default class SiteDocument extends Document {
             crossOrigin="anonymous"
           />
           <link rel="stylesheet" href="/fonts.css" />
+          <link rel="stylesheet" href="/eostrix.css" />
           <script
             async
             defer

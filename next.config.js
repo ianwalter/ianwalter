@@ -1,6 +1,11 @@
 const { promises: fs } = require('fs')
 const path = require('path')
-const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ })
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    rehypePlugins: [require('@mapbox/rehype-prism')]
+  }
+})
 
 function toRewrite (file) {
   const filename = file.split('.')[0]

@@ -18,3 +18,39 @@ Security isn’t the only use-case, though. The utility is generally useful
 whenever you need to reset state without having to write more code to do so.
 Let's look at an example in which a form has it's fields bound to a Vuex
 module's state:
+
+```js
+import Vuex from 'vuex'
+import VuexReset from '@ianwalter/vuex-reset'
+
+// Create a Vuex store.
+export default new Vuex.Store({
+  // Add the vuex-reset plugin to the store.
+  plugins: [VuexReset()],
+  modules: {
+    // The colorScheme module has initial values that we may want to
+    // reset to at some point.
+    colorScheme: {
+      namespaced: true,
+      state: {
+        name: 'Default',
+        colors: [
+          '#ff8080',
+          '#95ffa4',
+          '#ffe9aa',
+          '#91ddff',
+          '#c991e1'
+        ]
+      },
+      mutations: {
+      	// We need to add a dummy reset mutation so we can trigger
+        // the reset when desired.
+        reset: () => {},
+        // Here is an example mutation that can be used to update the
+        // colorScheme values.
+        save: (state, colorScheme) => Object.assign(state, colorScheme)
+      }
+    }
+  }
+})
+```

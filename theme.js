@@ -18,8 +18,8 @@ const theme = {
     global: {
       body: {
         backgroundColor: 'gray.900',
-        fontSize: 18,
-        lineHeight: '1.85rem'
+        fontSize: '1.25rem',
+        lineHeight: '1.75'
       }
     }
   },
