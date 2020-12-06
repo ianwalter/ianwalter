@@ -12,8 +12,8 @@ const components = {
       </Layout>
     )
   },
-  h1: props => <Heading as="h1" my={6} {...props} />,
-  p: props => <Box as="p" my={4} {...props} />,
+  h1: props => <Heading as="h1" my={8} {...props} />,
+  p: props => <Box as="p" my={6} {...props} />,
   a: props => <Link color="blue.200" fontWeight="medium" {...props} />
 }
 
