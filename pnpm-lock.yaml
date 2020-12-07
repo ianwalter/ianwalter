@@ -2,9 +2,9 @@ dependencies:
   '@chakra-ui/react': 1.0.2_4eaea526be85283c880f9b09d5f3f8a4
   '@emotion/react': 11.1.2_react@17.0.1
   '@emotion/styled': 11.0.0_7db2c78307a2945eb3b11eab78daaefe
+  '@ianwalter/mdxtract': 1.0.0
   '@mapbox/rehype-prism': 0.5.0
   '@mdx-js/loader': 1.6.22_react@17.0.1
-  '@mdx-js/mdx': 1.6.22
   '@next/mdx': 10.0.3_@mdx-js+loader@1.6.22
   common-tags: 1.8.0
   framer-motion: 2.9.5_react-dom@17.0.1+react@17.0.1
@@ -1185,6 +1185,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CbQdZr+rSZraon+kfL7tXZ61UZcy3xy2kJ0zxf9EMvANK90tjcJ2AihSHEZgA7E14tGYv5bhjUCT1sQqpgoHkA==
+  /@ianwalter/mdxtract/1.0.0:
+    dependencies:
+      '@babel/generator': 7.12.5
+      '@babel/parser': 7.12.7
+      '@babel/traverse': 7.12.9
+      '@mdx-js/mdx': 1.6.22
+      unist-util-visit: 2.0.3
+    dev: false
+    resolution:
+      integrity: sha512-IJdi1ZJM8V7aMmhiJMfT8Zz+xhxBKk2bNUGcvZLdjE7Lc4OUU2tag7TT8yTbrvoruQjaxbisQ+uYlMIqmRHgsQ==
   /@ianwalter/renovate-config/1.4.2:
     dev: true
     resolution:
@@ -7128,10 +7138,10 @@ specifiers:
   '@emotion/react': ^11.1.2
   '@emotion/styled': ^11.0.0
   '@ianwalter/eslint-config-react': ^3.5.0
+  '@ianwalter/mdxtract': ^1.0.0
   '@ianwalter/renovate-config': ^1.4.2
   '@mapbox/rehype-prism': ^0.5.0
   '@mdx-js/loader': ^1.6.22
-  '@mdx-js/mdx': ^1.6.22
   '@next/mdx': ^10.0.3
   common-tags: ^1.8.0
   framer-motion: ^2.9.5

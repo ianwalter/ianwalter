@@ -5,8 +5,9 @@ const getPosts = require('../lib/getPosts')
 
 const pagesPath = path.join(__dirname, '../pages')
 const intro = stripIndent`
-  This repo [(ianwalter/ianwalter)](https://github.com/ianwalter) contains my
-  personal website at [https://ianwalter.dev](https://ianwalter.dev).
+  This repo ([ianwalter/ianwalter](https://github.com/ianwalter/ianwalter))
+  contains my personal website at
+  [https://ianwalter.dev](https://ianwalter.dev).
 `
 
 async function run () {
