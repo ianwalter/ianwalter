@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "gen:readme": "node scripts/generateReadme",
     "dev": "next dev",
-    "build": "npm run gen:readme && next build",
+    "build": "next build",
     "start": "next start"
   },
   "repository": {
