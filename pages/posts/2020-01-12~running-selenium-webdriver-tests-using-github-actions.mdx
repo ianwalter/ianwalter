@@ -1,35 +1,85 @@
+import CodeCaption from '../../components/CodeCaption.js'
+
 # Selenium WebDriver testing on GitHub Actions
 
-I've found that running WebDriver-based tests using GitHub Actions is relatively inexpensive and pretty easy to set up and maintain. I'm sure others are doing this already but I couldn't find much on this topic and there are a few gotchas, so here's a summary of my experience getting this up and running.
+I've found that running WebDriver-based tests using GitHub Actions is relatively
+inexpensive and pretty easy to set up and maintain. I'm sure others are doing
+this already but I couldn't find much on this topic and there are a few gotchas,
+'so here's a summary of my experience getting this up and running.
 
-I am working on a [testing library called bff](https://github.com/ianwalter/bff) and a [plugin for it called bff-webdriver](github.com/ianwalter/bff-webdriver) that allows you to run [WebDriver](https://developer.mozilla.org/en-US/docs/Web/WebDriver)-based tests. To continuously test the plugin, I've been using [GitHub Actions](https://github.com/features/actions) but only running WebDriver test through the plugin's [BrowserStack](https://www.browserstack.com) integration (shout out to BrowserStack for providing the service for free). When my colleague Jim submitted the first PR, however, the CI job failed. This is because the BrowserStack credentials that are stored as secrets in the repo are not shared (otherwise people would be able to submit a PR to your repo with malicious code that can access/leak those secrets). I decided that it was time to not only test the BrowserStack integration but also run the tests with a local [Selenium](https://selenium.dev/) server.
+I am working on a [testing library called bff](https://github.com/ianwalter/bff)
+and a [plugin for it called bff-webdriver](github.com/ianwalter/bff-webdriver)
+that allows you to run
+[WebDriver](https://developer.mozilla.org/en-US/docs/Web/WebDriver)-based tests.
+To continuously test the plugin, I've been using
+[GitHub Actions](https://github.com/features/actions) but only running WebDriver
+test through the plugin's [BrowserStack](https://www.browserstack.com)
+integration (shout out to BrowserStack for providing the service for free). When
+my colleague Jim submitted the first PR, however, the CI job failed. This is
+because the BrowserStack credentials that are stored as secrets in the repo are
+not shared (otherwise people would be able to submit a PR to your repo with
+malicious code that can access/leak those secrets). I decided that it was time
+to not only test the BrowserStack integration but also run the tests with a
+local [Selenium](https://selenium.dev/) server.
 
-The first thing I needed to do was set up "[services](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#jobsjob_idservices)" in my workflow file. Services are just Docker images that are run as containers to support your workflow. I first had to set these up for testing a [web framework I'm working on called nrg](https://github.com/ianwalter/nrg). It was more straightforward in that case because the requests are unidirectional. The web framework makes requests to the Redis and PostgreSQL services and that's it. With WebDriver, it's bidirectional. The test framework makes requests to the Selenium Hub, the Selenium Hub makes requests to the browser services, and the browsers make requests to the server being tested.
+The first thing I needed to do was set up
+"[services](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#jobsjob_idservices)"
+in my workflow file. Services are just Docker images that are run as containers
+to support your workflow. I first had to set these up for testing a
+[web framework I'm working on called nrg](https://github.com/ianwalter/nrg). It
+was more straightforward in that case because the requests are unidirectional.
+The web framework makes requests to the Redis and PostgreSQL services and that's
+it. With WebDriver, it's bidirectional. The test framework makes requests to the
+Selenium Hub, the Selenium Hub makes requests to the browser services, and the
+browsers make requests to the server being tested.
 
-Set up the Selenium Hub and a Firefox service ([Click here for the whole file](https://github.com/ianwalter/bff-webdriver/blob/master/.github/workflows/ci.yml#L16)):
+Set up the Selenium Hub and a Firefox service
+([Click here for the whole file](https://github.com/ianwalter/bff-webdriver/blob/master/.github/workflows/ci.yml#L16)):
 
-        services:
-          hub:
-            image: selenium/hub:3.141.59-gold
-          firefox:
-            image: selenium/node-firefox:3.141.59-gold
-            env:
-              HUB_HOST: hub
-              HUB_PORT: 4444
+```yml
+services:
+  hub:
+    image: selenium/hub:3.141.59-gold
+  firefox:
+    image: selenium/node-firefox:3.141.59-gold
+    env:
+      HUB_HOST: hub
+      HUB_PORT: 4444
+```
 
-ci.yml
-(You can set up other browsers like Chrome or maybe even Edge and Safari since GitHub Actions can run Windows and macOS VMs but this is beyond the scope of what I needed).
+<CodeCaption>
+  ci.yml
+</CodeCaption>
 
-Next I had to configure a `--network-alias` option which is used as the hostname for your test server by the browser(s). I also had to specify an environment variable for the Selenium Hub hostname (it's the same name as the service, `hub`) so that the test framework knows where to make the WebDriver requests as well as an environment variable for the network alias so that my tests know where to tell the browser(s) to navigate.
+(You can set up other browsers like Chrome or maybe even Edge and Safari since
+GitHub Actions can run Windows and macOS VMs but this is beyond the scope of
+what I needed).
 
-Set up your server and tests within a container ([Click here for the whole file](https://github.com/ianwalter/bff-webdriver/blob/master/.github/workflows/ci.yml#L10)):
+Next I had to configure a `--network-alias` option which is used as the hostname
+for your test server by the browser(s). I also had to specify an environment
+variable for the Selenium Hub hostname (it's the same name as the service,
+`hub`) so that the test framework knows where to make the WebDriver requests as
+well as an environment variable for the network alias so that my tests know
+where to tell the browser(s) to navigate.
 
-        container:
-          image: node:13.6
-          options: --network-alias testHost
-        env:
-          SELENIUM_HUB_HOST: hub
-          TEST_HOST: testHost
+Set up your server and tests within a container
+([Click here for the whole file](https://github.com/ianwalter/bff-webdriver/blob/master/.github/workflows/ci.yml#L10)):
 
-ci.yml
-Now in your tests, make requests to `http://testHost` and that's it, you should now have a WebDriver testing setup using GitHub Actions. If you're interested in a lighter-weight browser testing setup, checkout my [Puppeteer GitHub action](https://github.com/ianwalter/puppeteer) which makes testing in a headless Chrome environment easier.
+```yml
+container:
+  image: node:13.6
+  options: --network-alias testHost
+env:
+  SELENIUM_HUB_HOST: hub
+  TEST_HOST: testHost
+```
+
+<CodeCaption>
+  ci.yml
+</CodeCaption>
+
+Now in your tests, make requests to `http://testHost` and that's it, you should
+now have a WebDriver testing setup using GitHub Actions. If you're interested in
+a lighter-weight browser testing setup, checkout my
+[Playwright GitHub Action](https://github.com/ianwalter/playwright-container)
+which makes testing in a headless Chrome environment easier.

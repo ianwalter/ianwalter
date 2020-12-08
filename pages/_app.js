@@ -1,11 +1,17 @@
 import { MDXProvider } from '@mdx-js/react'
-import { ChakraProvider, Heading, Box, Link, Code, UnorderedList } from '@chakra-ui/react'
+import {
+  ChakraProvider,
+  Heading,
+  Box,
+  Link,
+  Code,
+  UnorderedList
+} from '@chakra-ui/react'
 import theme from '../lib/theme.js'
 import Layout from '../components/Layout.js'
 
 const components = {
-  wrapper: function Wrapper (props, ...rest) {
-    console.log('WRAPPER', props, rest)
+  wrapper: function Wrapper (props) {
     return <Layout {...props} />
   },
   h1: function H1 (props) {
