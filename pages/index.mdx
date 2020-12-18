@@ -1,7 +1,16 @@
-# Ayyy, it's Ian 👋
+import Intro from '../static/intro.mdx'
+import LatestPosts from '../components/LatestPosts.js'
+import getPosts from '../lib/getPosts.js'
 
-I'm a software developer and manager with over a decade of experience. I'm
-interested in building software that is a pleasure to use and adds value to
-people's lives.
+export const getStaticProps = async () => {
+  const posts = await getPosts({ isExternal: false })
+  return {
+    props: {
+      posts: posts.reverse().slice(0, 5)
+    }
+  }
+}
 
 <Intro />
+
+<LatestPosts posts={props.posts} />

@@ -1,18 +1,25 @@
 import { MDXProvider } from '@mdx-js/react'
-import { ChakraProvider, Heading, Box, Link, Code, UnorderedList } from '@chakra-ui/react'
+import {
+  ChakraProvider,
+  Heading,
+  Box,
+  Link,
+  Code,
+  UnorderedList
+} from '@chakra-ui/react'
 import theme from '../lib/theme.js'
 import Layout from '../components/Layout.js'
 
 const components = {
-  wrapper: function Wrapper (props, ...rest) {
-    console.log('WRAPPER', props, rest)
+  wrapper: function Wrapper (props) {
+    if (props.layout === false) return props.children
     return <Layout {...props} />
   },
   h1: function H1 (props) {
-    return <Heading as="h1" my={8} {...props} />
+    return <Heading as="h1" my={6} {...props} />
   },
   h2: function H2 (props) {
-    return <Heading as="h2" size="lg" my={8} {...props} />
+    return <Heading as="h2" size="lg" my={6} {...props} />
   },
   h3: function H3 (props) {
     return <Heading as="h3" size="md" my={6} {...props} />
@@ -37,24 +44,24 @@ const components = {
       />
     )
   },
-  Intro: function Intro () {
-    return (
-      <>
-        This is my pesonal website that I built with {''}
-        <Link href="https://nextjs.org/" color="blue.200" isExternal>
-          Next.js
-        </Link>
-        . The source code is available on GitHub at {''}
-        <Link
-          href="https://github.com/ianwalter/ianwalter"
-          color="blue.200"
-          isExternal
-        >
-          https://github.com/ianwalter/ianwalter
-        </Link>
-      </>
-    )
-  }
+  // Intro: function Intro () {
+  //   return (
+  //     <>
+  //       This is my pesonal website that I built with {''}
+  //       <Link href="https://nextjs.org/" color="blue.200" isExternal>
+  //         Next.js
+  //       </Link>
+  //       . The source code is available on GitHub at {''}
+  //       <Link
+  //         href="https://github.com/ianwalter/ianwalter"
+  //         color="blue.200"
+  //         isExternal
+  //       >
+  //         https://github.com/ianwalter/ianwalter
+  //       </Link>
+  //     </>
+  //   )
+  // }
 }
 
 export default function App ({ Component, pageProps }) {
