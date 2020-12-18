@@ -1,3 +1,4 @@
+import '../styles.css'
 import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
 import {
@@ -43,7 +44,12 @@ const components = {
     return <Box as="p" my={6} {...props} />
   },
   a: function A (props) {
-    return <Link color="blue.200" fontWeight="medium" {...props} />
+    return <Link
+      color="blue.200"
+      fontWeight="medium"
+      isExternal={props.href.indexOf('http') === 0}
+      {...props}
+    />
   },
   ul: function Ul (props) {
     return <UnorderedList {...props} />
@@ -59,24 +65,6 @@ const components = {
       />
     )
   },
-  // Intro: function Intro () {
-  //   return (
-  //     <>
-  //       This is my pesonal website that I built with {''}
-  //       <Link href="https://nextjs.org/" color="blue.200" isExternal>
-  //         Next.js
-  //       </Link>
-  //       . The source code is available on GitHub at {''}
-  //       <Link
-  //         href="https://github.com/ianwalter/ianwalter"
-  //         color="blue.200"
-  //         isExternal
-  //       >
-  //         https://github.com/ianwalter/ianwalter
-  //       </Link>
-  //     </>
-  //   )
-  // },
   CodeCaption
 }
 

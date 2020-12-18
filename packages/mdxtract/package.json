@@ -1,0 +1,61 @@
+{
+  "name": "@ianwalter/mdxtract",
+  "version": "1.0.1",
+  "description": "Extract data from mdx files",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "bff",
+    "example": "node example"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/mdxtract.git"
+  },
+  "keywords": [
+    "mdx",
+    "extract",
+    "data",
+    "markdown",
+    "react"
+  ],
+  "bugs": {
+    "url": "https://github.com/ianwalter/mdxtract/issues"
+  },
+  "homepage": "https://github.com/ianwalter/mdxtract#readme",
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.12.0",
+    "@ianwalter/bff": "^9.12.3",
+    "@ianwalter/eslint-config": "^6.0.0",
+    "@ianwalter/renovate-config": "^1.4.2"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.12.5",
+    "@babel/parser": "^7.12.7",
+    "@babel/traverse": "^7.12.9",
+    "@mdx-js/mdx": "^1.6.22",
+    "unist-util-visit": "^2.0.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@ianwalter"
+    ]
+  },
+  "renovate": {
+    "extends": [
+      "@ianwalter"
+    ]
+  }
+}
