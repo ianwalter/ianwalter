@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 # Spotlight on vuex-reset
 
 [Vuex](https://vuex.vuejs.org/) makes it easy to manage the app-wide state for
@@ -21,7 +19,6 @@ whenever you need to reset state without having to write more code to do so.
 Let's look at an example in which a form has it's fields bound to a Vuex
 module's state:
 
-`store.js`
 ```js
 import Vuex from 'vuex'
 import VuexReset from '@ianwalter/vuex-reset'
@@ -58,7 +55,10 @@ export default new Vuex.Store({
 })
 ```
 
-`NewColorScheme.vue`
+<CodeCaption>
+  store.js
+</CodeCaption>
+
 ```js
 export default {
   data () {
@@ -80,6 +80,10 @@ export default {
   }
 }
 ```
+
+<CodeCaption>
+  NewColorScheme.vue
+</CodeCaption>
 
 When a user first navigates to the imaginary New Color Scheme form in the
 `NewColorScheme.vue` component the default values will be the initial values in

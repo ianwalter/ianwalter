@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
 import {
   ChakraProvider,
@@ -9,11 +10,25 @@ import {
 } from '@chakra-ui/react'
 import theme from '../lib/theme.js'
 import Layout from '../components/Layout.js'
+import CodeCaption from '../components/CodeCaption.js'
 
 const components = {
-  wrapper: function Wrapper (props) {
-    if (props.layout === false) return props.children
-    return <Layout {...props} />
+  wrapper: function Wrapper ({ children, ...props }) {
+    if (props.layout === false) return children
+    const h1Node = children.find(c => c.props.mdxType === 'h1')
+    return (
+      <Layout {...props}>
+
+        {h1Node && h1Node.props && h1Node.props.children && (
+          <Head>
+            <title>{h1Node.props.children}</title>
+          </Head>
+        )}
+
+        {children}
+
+      </Layout>
+    )
   },
   h1: function H1 (props) {
     return <Heading as="h1" my={6} {...props} />
@@ -61,7 +76,8 @@ const components = {
   //       </Link>
   //     </>
   //   )
-  // }
+  // },
+  CodeCaption
 }
 
 export default function App ({ Component, pageProps }) {

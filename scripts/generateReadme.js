@@ -14,7 +14,7 @@ async function run () {
   const posts = await getPosts()
   const latest = posts.reverse().slice(0, 5)
   const index = await fs.readFile(path.join(pagesPath, 'index.mdx'), 'utf-8')
-  const readme = index.replace('<Intro />', intro)
+  const readme = index.slice(index.indexOf('#')).replace('<Intro />', intro)
 
   // const readme = stripIndents`
   //   ${title}

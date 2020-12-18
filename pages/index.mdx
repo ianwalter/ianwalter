@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Intro from '../static/intro.mdx'
 import LatestPosts from '../components/LatestPosts.js'
 import getPosts from '../lib/getPosts.js'
@@ -10,6 +11,10 @@ export const getStaticProps = async () => {
     }
   }
 }
+
+<Head>
+  <title>Ian Walter</title>
+</Head>
 
 <Intro />
 

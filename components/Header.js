@@ -18,7 +18,7 @@ export default function Header () {
 
         <Box>
           <NextLink href="https://github.com/ianwalter">
-            <a>
+            <a aria-label="GitHub">
               <GrGithub />
             </a>
           </NextLink>
@@ -26,7 +26,7 @@ export default function Header () {
 
         <Box ml={6}>
           <NextLink href="https://github.com/ianwalter">
-            <a>
+            <a aria-label="Twitter">
               <GrTwitter />
             </a>
           </NextLink>

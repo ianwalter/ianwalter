@@ -1,8 +1,15 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Code, Text } from '@chakra-ui/react'
 
 export default function CodeCaption ({ children, ...props }) {
   return (
-    <Box {...props}>
+    <Box
+      mt={-5}
+      mb={5}
+      color="gray.400"
+      textAlign="center"
+      fontSize="85%"
+      {...props}
+    >
       {children}
     </Box>
   )

@@ -1,5 +1,3 @@
-import CodeCaption from '../../components/CodeCaption.js'
-
 # Spotlight on decision-tree
 
 I created [decision-tree](https://github.com/ianwalter/decision-tree) because I
@@ -139,18 +137,18 @@ const decisionTree = new DecisionTree({
 Once a decision-tree instance is created, we can navigate it by setting answers
 to questions and calling `next` like:
 
-`Initial tree navigation`
-
 ```js
 decisionTree.set('attribute', 'D').next()
 const result = decisionTree.set('proficiency', 'swords').next()
 ```
 
+<CodeCaption>
+  Initial tree navigation
+</CodeCaption>
+
 In this example, if the node returned by `next` has no `leadsTo` property we can
 assume that we've reached a result. In the navigation above, we would have
 arrived at the result:
-
-`Initial result`
 
 ```js
 {
@@ -163,15 +161,21 @@ arrived at the result:
 }
 ```
 
+<CodeCaption>
+  Initial result
+</CodeCaption>
+
 If we wanted to arrive at a different result, we can call `prev` to go back to
 the previous question and change our answer like:
-
-`Changing our response to the previous question`
 
 ```js
 decisionTree.prev()
 const result = decisionTree.set('proficiency', 'bows').next()
 ```
+
+<CodeCaption>
+  Changing our response to the previous question
+</CodeCaption>
 
 Now our result would be:
 
@@ -185,7 +189,10 @@ Now our result would be:
 }
 ```
 
-`New result`
+<CodeCaption>
+  New result
+</CodeCaption>
+
 
 You can see decision-tree in action at the binx health website where it’s being
 used to power Find My Test, an assessment that helps people determine what kind
