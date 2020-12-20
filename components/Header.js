@@ -25,7 +25,7 @@ export default function Header () {
         </Box>
 
         <Box ml={6}>
-          <NextLink href="https://github.com/ianwalter">
+          <NextLink href="https://twitter.com/IanWalter">
             <a aria-label="Twitter">
               <GrTwitter />
             </a>
