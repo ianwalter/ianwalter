@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslit .",
     "gen:readme": "node scripts/generateReadme",
     "dev": "next dev",
     "build": "next build",
@@ -54,6 +54,9 @@
       "react/prop-types": 0
     }
   },
+  "eslintIgnore": [
+    "packages/eslit/fixtures/fail.js"
+  ],
   "renovate": {
     "extends": [
       "@ianwalter"

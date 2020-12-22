@@ -1,6 +1,13 @@
 {
   "name": "@ianwalter/eslit",
+  "version": "1.0.0",
+  "description": "A better eslint experience",
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
   "type": "module",
+  "module": "index.js",
   "license": "SEE LICENSE IN LICENSE",
   "bin": {
     "eslit": "cli.js"
@@ -9,12 +16,40 @@
     "lint": "./cli.js",
     "eslint": "eslint ."
   },
+  "files": [
+    "lib",
+    "cli.js",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/ianwalter.git",
+    "directory": "packages/eslit"
+  },
+  "keywords": [
+    "eslint",
+    "cli",
+    "lint"
+  ],
+  "bugs": {
+    "url": "https://github.com/ianwalter/ianwalter/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ianwalter"
+  },
+  "homepage": "https://github.com/ianwalter/ianwalter/blob/main/packages/eslit#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@generates/cli": "^0.0.9",
     "@generates/logger": "^0.0.9",
     "common-tags": "^1.8.0",
-    "eslint": "^7.16.0",
     "semver": "^7.3.4"
+  },
+  "peerDependencies": {
+    "eslint": "^7.16.0"
   },
   "devDependencies": {
     "@ianwalter/eslint-config": "^6.1.0"

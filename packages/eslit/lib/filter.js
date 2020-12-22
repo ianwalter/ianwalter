@@ -1,7 +1,8 @@
 import { oneLine } from 'common-tags'
 import semver from 'semver'
-import { createLogger, chalk } from '@generates/logger'
+import { createLogger } from '@generates/logger'
 
+// FIXME: Change namespace to eslit.filter when logger is fixed.
 const logger = createLogger({ level: 'info', namespace: 'eslit' })
 
 const tlaMessage = oneLine`

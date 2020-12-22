@@ -39,4 +39,4 @@ Created by [Ian Walter](https://ianwalter.dev)
 [ciImage]: https://github.com/ianwalter/mdxtract/workflows/CI/badge.svg
 [ciUrl]: https://github.com/ianwalter/mdxtract/actions
 [emmUrl]: https://github.com/manovotny/extract-mdx-metadata
-[licenseUrl]: https://github.com/ianwalter/mdxtract/blob/main/LICENSE
+[licenseUrl]: https://github.com/ianwalter/ianwalter/blob/main/packages/mdxtract/LICENSE

@@ -1,7 +1,7 @@
 const path = require('path')
 const { promises: fs } = require('fs')
-const { stripIndent, stripIndents } = require('common-tags')
-const getPosts = require('../lib/getPosts')
+const { stripIndent } = require('common-tags')
+// const getPosts = require('../lib/getPosts')
 
 const pagesPath = path.join(__dirname, '../pages')
 const intro = stripIndent`
@@ -11,8 +11,8 @@ const intro = stripIndent`
 `
 
 async function run () {
-  const posts = await getPosts()
-  const latest = posts.reverse().slice(0, 5)
+  // const posts = await getPosts()
+  // const latest = posts.reverse().slice(0, 5)
   const index = await fs.readFile(path.join(pagesPath, 'index.mdx'), 'utf-8')
   const readme = index.slice(index.indexOf('#')).replace('<Intro />', intro)
 
