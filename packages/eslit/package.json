@@ -1,0 +1,28 @@
+{
+  "name": "@ianwalter/eslit",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE",
+  "bin": {
+    "eslit": "cli.js"
+  },
+  "scripts": {
+    "lint": "./cli.js",
+    "eslint": "eslint ."
+  },
+  "dependencies": {
+    "@generates/cli": "^0.0.9",
+    "@generates/logger": "^0.0.9",
+    "common-tags": "^1.8.0",
+    "eslint": "^7.16.0",
+    "semver": "^7.3.4"
+  },
+  "devDependencies": {
+    "@ianwalter/eslint-config": "^6.1.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@ianwalter/eslint-config"
+    ]
+  }
+}
