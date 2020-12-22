@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/eslit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A better eslint experience",
   "author": {
     "name": "Ian Walter",
@@ -45,7 +45,6 @@
   "dependencies": {
     "@generates/cli": "^0.0.9",
     "@generates/logger": "^0.0.9",
-    "common-tags": "^1.8.0",
     "semver": "^7.3.4"
   },
   "peerDependencies": {
@@ -57,7 +56,7 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@ianwalter/eslint-config"
+      "@ianwalter"
     ]
   }
 }

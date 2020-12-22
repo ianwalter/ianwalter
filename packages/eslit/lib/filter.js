@@ -1,13 +1,13 @@
-import { oneLine } from 'common-tags'
 import semver from 'semver'
 import { createLogger } from '@generates/logger'
 
 // FIXME: Change namespace to eslit.filter when logger is fixed.
 const logger = createLogger({ level: 'info', namespace: 'eslit' })
 
-const tlaMessage = oneLine`
-  Parsing error: Cannot use keyword 'await' outside an async function
-`
+const tlaMessages = [
+  "Parsing error: Cannot use keyword 'await' outside an async function",
+  "Parsing error: 'await' is only allowed within async functions"
+]
 
 const isModernNode = semver.gte(process.versions.node, '14.8.0')
 
@@ -21,7 +21,7 @@ export default function filter (output) {
     logger.debug('Result', result)
     for (const item of result.messages) {
       logger.debug('Item', item)
-      if (item.message === tlaMessage && isModernNode) {
+      if (isModernNode && tlaMessages.find(m => item.message.includes(m))) {
         errorCount--
         result.errorCount--
       } else if (item.severity === 1) {
