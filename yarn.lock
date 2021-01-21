@@ -1103,6 +1103,20 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@generates/cli@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-0.0.10.tgz#5619dc958b3b8432101a6bc4e050b1ceee5be1ab"
+  integrity sha512-MO0UPi6uMT96VckR5s65cpnvQRGMT/52qOGest4Ot0ry+In2H2+ox2RQRiNWK8lSPHUf5n327qRlLrsbz1GllQ==
+  dependencies:
+    "@generates/dotter" "^2.0.0"
+    "@generates/logger" "^0.1.0"
+    "@generates/merger" "^0.1.0"
+    camelcase "^6.0.0"
+    common-tags "^1.8.0"
+    decamelize "^4.0.0"
+    getopts "^2.2.5"
+    read-pkg-up "^7.0.1"
+
 "@generates/cli@^0.0.9":
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-0.0.9.tgz#8d3c7aa341cadbec6e256d7245084d92c76e8ebf"
@@ -1116,6 +1130,11 @@
     decamelize "^4.0.0"
     getopts "^2.2.5"
     read-pkg-up "^7.0.1"
+
+"@generates/dotter@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@generates/dotter/-/dotter-2.0.0.tgz#680523dbe6782ad8b924082258898378472106e5"
+  integrity sha512-QI5gmvS1ZOeZ8msYdctT7VARrHWGGG3PuFYGVqhzkeBkalnaqCAtqOxaGFiEab5f7VzEOZt6d41pmM3fbQmaIQ==
 
 "@generates/logger@^0.0.9":
   version "0.0.9"
@@ -1135,7 +1154,25 @@
     marked-terminal "^4.1.0"
     strip-ansi "^6.0.0"
 
-"@generates/merger@^0.1.0", "@generates/merger@^0.1.2":
+"@generates/logger@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@generates/logger/-/logger-0.1.0.tgz#dba9f28a82146a6a73d40af07bd2fc249d64f155"
+  integrity sha512-ltA/KJgMRt5qf7gBT+Z8V0Dzuc83mdyQJwjhn3eWxeG6SMNF8Fqrx8yzvQ13AmHWy7wF7/m7CLz8oNsND/M8Mw==
+  dependencies:
+    "@generates/cli" "^0.0.10"
+    "@generates/dotter" "^2.0.0"
+    "@generates/merger" "^0.1.0"
+    "@ianwalter/chromafi" "^1.0.1"
+    "@ianwalter/clone" "^6.0.1"
+    "@ianwalter/cloneable" "^2.0.0"
+    chalk "^4.1.0"
+    has-ansi "^4.0.0"
+    has-emoji "^1.1.0"
+    marked "^1.1.1"
+    marked-terminal "^4.1.0"
+    strip-ansi "^6.0.0"
+
+"@generates/merger@^0.1.0", "@generates/merger@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@generates/merger/-/merger-0.1.3.tgz#6808e51767b45bf75a8354f739d645826de85677"
   integrity sha512-x4KKHexiP4hIfoGZumc3RSac1t9d/aGErxbG9NASHcx59mljW2uyKDt4qP3igi9hszIHV5mjb4TbAYUNFoWg3w==
@@ -1160,13 +1197,13 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@ianwalter/bff@^10.0.1":
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/@ianwalter/bff/-/bff-10.0.1.tgz#d631e3e2f182ef1e9b94d18221a7d1a48574d7db"
-  integrity sha512-XYwJSBgaFyIzqx9o7gf1s/LcEL/iUhIWwwPqAAjFbPrBf/N86c6kFksZWE6KlTxGrxNgWpu4bJPD7x0lztx8oQ==
+"@ianwalter/bff@^10.0.2":
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@ianwalter/bff/-/bff-10.0.2.tgz#8fa380102e0d7224e103abcdfbdf0bc0bbba2e6c"
+  integrity sha512-LuJDta90/ilDf4cNrsFkRzyVt5sqVxNKhwSPl+6PzSfBBZPHzHEoXmVE6CQjUoZQOcvfiox7a0e65uU0TsWBBw==
   dependencies:
-    "@generates/logger" "^0.0.9"
-    "@generates/merger" "^0.1.2"
+    "@generates/logger" "^0.1.0"
+    "@generates/merger" "^0.1.3"
     "@ianwalter/cli" "^4.1.0"
     "@ianwalter/clone" "^6.0.1"
     "@ianwalter/cloneable" "^2.0.0"
@@ -1183,7 +1220,7 @@
     junit-report-builder "^2.0.0"
     p-series "^2.1.0"
     tiny-glob "^0.2.8"
-    workerpool "^6.0.3"
+    workerpool "^6.0.4"
 
 "@ianwalter/chromafi@^1.0.1":
   version "1.0.1"
@@ -8589,10 +8626,10 @@ worker-farm@^1.7.0:
   dependencies:
     errno "~0.1.7"
 
-workerpool@^6.0.3:
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-6.0.3.tgz#3f80ba4d914fe7bb8d933628c26e5d7ff820c703"
-  integrity sha512-meU8ZzO+ipcx/njxtKUcbu2K95085q5WYDo8fR6PMW3hCY4driteIsNsEowYV7dzOtvq0HotUKsReJkK8gKXgg==
+workerpool@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/workerpool/-/workerpool-6.0.4.tgz#f83ecf101b35c034cb20ed38cedd619dde9d722c"
+  integrity sha512-sAc9w9oAJQ2680gDArGinjw0Ygj2K3KF1ZCRfslBKUCzc9Gycwlj9ZIAbizPRBftcXxhXgoGMVPxJE0VMNnWbw==
 
 wrap-ansi@^6.2.0:
   version "6.2.0"
