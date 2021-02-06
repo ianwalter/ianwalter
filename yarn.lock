@@ -1322,17 +1322,17 @@
   resolved "https://registry.yarnpkg.com/@ianwalter/dot/-/dot-1.0.5.tgz#060c24e9e3ea22f03d03a0f0a1434e18ada079b2"
   integrity sha512-xOtXmoeKrLudrNF5noqJPXJkMtm33A/Hhy/UPV0z5pWCtPa8pN1b5NFgrsFZsA/UsUN47MKWjLazPuZIO77ljw==
 
-"@ianwalter/eslint-config-react@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@ianwalter/eslint-config-react/-/eslint-config-react-4.0.0.tgz#0055a35096b9f71ebbc422c564d7e5e0fe0ee005"
-  integrity sha512-dBukUSReCaEQ4GEqZSthwgE+lnEGnUdKL8Jgx0sBGoLChrTPUEKM7o4QJ/BzxgxnKyvVIdUmi3agsk5VAcCzFw==
+"@ianwalter/eslint-config-react@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@ianwalter/eslint-config-react/-/eslint-config-react-4.1.0.tgz#f795a4a825186c68cba211d989f4e3dcc004cc71"
+  integrity sha512-rBtBm63nPpyeOEAP/jrbIu0YQST/dXrLOGGIojRGk+SAHSg+3CY9yC/wX3dqlg4QT6TlKOB1qiD1IVwVUkGP2g==
   dependencies:
-    "@ianwalter/eslint-config" "^6.1.0"
+    "@ianwalter/eslint-config" "^6.2.0"
     babel-eslint "^10.1.0"
-    eslint-plugin-react "^7.21.5"
+    eslint-plugin-react "^7.22.0"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@ianwalter/eslint-config@^6.1.0", "@ianwalter/eslint-config@^6.2.0":
+"@ianwalter/eslint-config@^6.2.0":
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/@ianwalter/eslint-config/-/eslint-config-6.2.0.tgz#93d3b387d7c44748381af3649ec9b410d5b82375"
   integrity sha512-vx1mxFKvbYwk+Plt+xyXeKuxqH8ibW2k4sQDW/fJ/colqrahb6HaOZbym1Iclx4iwmDZ5Pk9zNbKQsKaXOmSZA==
@@ -3770,7 +3770,7 @@ eslint-plugin-react-hooks@^4.2.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.0.tgz#8c229c268d468956334c943bb45fc860280f5556"
   integrity sha512-623WEiZJqxR7VdxFCKLI6d6LLpwJkGPYKODnkH3D7WpOG5KM8yWueBd8TLsNAetEJNF5iJmolaAKO3F8yzyVBQ==
 
-eslint-plugin-react@^7.21.5:
+eslint-plugin-react@^7.22.0:
   version "7.22.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.22.0.tgz#3d1c542d1d3169c45421c1215d9470e341707269"
   integrity sha512-p30tuX3VS+NWv9nQot9xIGAHBXR0+xJVaZriEsHoJrASGCJZDJ8JLNM0YqKqI0AKm6Uxaa1VUHoNEibxRCMQHA==
