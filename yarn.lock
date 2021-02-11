@@ -1259,7 +1259,7 @@
   dependencies:
     "@chakra-ui/utils" "1.1.0"
 
-"@changesets/apply-release-plan@^4.2.0":
+"@changesets/apply-release-plan@^4.0.0", "@changesets/apply-release-plan@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@changesets/apply-release-plan/-/apply-release-plan-4.2.0.tgz#f1005815f27c3238f66507e90c6ae14d8fc62b41"
   integrity sha512-/vt6UwgQldhOw93Gb8llI5OuYGlJt2+U45AfcXsoxzl8gZzCmChGm3vUaQJYbmtL8TbL8OOVXHRIKJJidMNPKw==
@@ -1387,7 +1387,7 @@
     fs-extra "^7.0.1"
     micromatch "^4.0.2"
 
-"@changesets/config@^1.5.0":
+"@changesets/config@^1.4.0", "@changesets/config@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@changesets/config/-/config-1.5.0.tgz#6d58b01e45916318d3f39e9cde86a5d69dc58ed8"
   integrity sha512-Bl9nLVYcwFCpd9jpzcOsExZk1NuTYX20D2YWHCdS1xll3W0yOdSUlWLUCCfugN1l3+yTR6iDW6q9o6vpCevWvA==
@@ -1586,10 +1586,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.5.tgz#2c40f81449a4e554e9fc6396910ed4843ec2be50"
   integrity sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==
 
-"@emotion/react@^11.1.2":
-  version "11.1.4"
-  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.1.4.tgz#ddee4247627ff7dd7d0c6ae52f1cfd6b420357d2"
-  integrity sha512-9gkhrW8UjV4IGRnEe4/aGPkUxoGS23aD9Vu6JCGfEDyBYL+nGkkRBoMFGAzCT9qFdyUvQp4UUtErbKWxq/JS4A==
+"@emotion/react@^11.1.5":
+  version "11.1.5"
+  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.1.5.tgz#15e78f9822894cdc296e6f4e0688bac8120dfe66"
+  integrity sha512-xfnZ9NJEv9SU9K2sxXM06lzjK245xSeHRpUh67eARBm3PBHjjKIZlfWZ7UQvD0Obvw6ZKjlC79uHrlzFYpOB/Q==
   dependencies:
     "@babel/runtime" "^7.7.2"
     "@emotion/cache" "^11.1.3"
