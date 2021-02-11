@@ -1,10 +1,10 @@
-const path = require('path')
-const { promises: fs } = require('fs')
-const { test } = require('@ianwalter/bff')
-const mdxtract = require('.')
+import path from 'path'
+import { promises as fs } from 'fs'
+import { test } from '@ianwalter/bff'
+import mdxtract from './index.js'
 
 test('mdxtract', async t => {
-  const filePath = path.join(__dirname, 'fixtures/example.mdx')
+  const filePath = new URL('fixtures/example.mdx', import.meta.url)
   const content = await fs.readFile(filePath, 'utf-8')
   const data = await mdxtract(content)
   t.logger.log(data)
