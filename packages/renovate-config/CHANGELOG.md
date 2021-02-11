@@ -1,5 +1,11 @@
 # @ianwalter/renovate-config
 
+## 1.4.4
+
+### Patch Changes
+
+- b8be9ec: Stop automerging dev deps
+
 ## 1.4.3
 
 ### Patch Changes
