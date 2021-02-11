@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/renovate-config",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Ian's Renovate config preset",
   "main": "package.json",
   "scripts": {
