@@ -75,10 +75,5 @@
       ],
       "reviewers": []
     }
-  },
-  "renovate": {
-    "extends": [
-      "@ianwalter"
-    ]
   }
 }
