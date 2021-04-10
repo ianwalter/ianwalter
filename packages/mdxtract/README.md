@@ -23,7 +23,7 @@ const data = await mdxtract(content)
 ## Install
 
 ```
-pnpm add @ianwalter/mdxtract
+yarn add @ianwalter/mdxtract
 ```
 
 ## License

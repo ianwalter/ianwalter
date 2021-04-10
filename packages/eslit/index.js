@@ -3,7 +3,7 @@ import { createLogger, chalk } from '@generates/logger'
 import filter from './lib/filter.js'
 
 const logger = createLogger({ level: 'info', namespace: 'eslit' })
-const formatLoc = i => chalk.gray(`${i.filePath}:${i.line}:${i.column}`)
+const formatLoc = i => chalk.dim(`${i.filePath}:${i.line}:${i.column}`)
 
 export async function run ({ files }) {
   const cli = new CLIEngine()

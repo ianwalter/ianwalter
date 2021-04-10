@@ -1,0 +1,79 @@
+{
+  "name": "@ianwalter/renovate-config",
+  "version": "1.4.4",
+  "description": "Ian's Renovate config preset",
+  "main": "package.json",
+  "scripts": {
+    "test": "renovate-config-validator"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/renovate-config.git"
+  },
+  "keywords": [
+    "renovate",
+    "config",
+    "preset"
+  ],
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/ianwalter/renovate-config/issues"
+  },
+  "homepage": "https://github.com/ianwalter/renovate-config#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.14.1",
+    "@ianwalter/renovate-config": "file:./",
+    "renovate": "^24.47.0"
+  },
+  "renovate-config": {
+    "default": {
+      "extends": [
+        ":combinePatchMinorReleases",
+        ":ignoreUnstable",
+        ":prImmediately",
+        ":renovatePrefix",
+        ":updateNotScheduled",
+        ":ignoreModulesAndTests",
+        ":rebaseStalePrs"
+      ],
+      "rangeStrategy": "bump",
+      "suppressNotifications": [
+        "prIgnoreNotification"
+      ],
+      "packageRules": [
+        {
+          "matchPackagePatterns": [
+            "^@ianwalter/bff"
+          ],
+          "groupName": "bff"
+        },
+        {
+          "matchPackagePatterns": [
+            "^@ianwalter/nrg"
+          ],
+          "groupName": "nrg"
+        },
+        {
+          "matchPackagePatterns": [
+            "^@sentry"
+          ],
+          "groupName": "Sentry"
+        },
+        {
+          "matchPackagePatterns": [
+            "^@emotion"
+          ],
+          "groupName": "Emotion"
+        }
+      ],
+      "reviewers": []
+    }
+  }
+}

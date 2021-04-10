@@ -51,7 +51,7 @@
     "eslint": "^7.16.0"
   },
   "devDependencies": {
-    "@ianwalter/eslint-config": "^6.1.0"
+    "@ianwalter/eslint-config": "^6.2.0"
   },
   "eslintConfig": {
     "root": true,
