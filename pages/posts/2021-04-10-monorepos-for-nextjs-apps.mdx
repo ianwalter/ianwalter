@@ -1,0 +1,33 @@
+# Monorepos for Next.js apps
+
+Using a monorepo can be an effective way to simplify your development workflows
+when developing multiple packages and applications. Here is how I set up
+monorepos and how I get Next.js apps to be able to use shared code in a common
+diretory within the monorepo.
+
+## Yarn workspaces
+
+I use a feature of Yarn called Yarn Workspaces to be able to use modules within
+the monorepo as if they are npm/node modules but without the having to do
+anything when the code gets updated. It's kind of like `yarn link` without ever
+having to publish the modules. I add something like the following to the root
+`package.json` file:
+
+```json
+"workspaces": [
+  "apps/*",
+  "packages/*",
+  "lib/*"
+]
+```
+
+I use the apps directory for full web applications or services. I use the
+packages directory for any packages that I want to develop within the monorepo
+for convenience but also want to publish as npm packages and use elsewhere. I
+use the lib directory for shared code, so for example, I would have a directory
+called `lib/shared` with shared components and utilities. Then I'm able to
+reference that module in apps like this:
+
+```js
+import TextField from 'shared/components/fields/TextField.js'
+```
