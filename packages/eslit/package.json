@@ -45,7 +45,7 @@
   "dependencies": {
     "@generates/cli": "^0.0.9",
     "@generates/logger": "^0.0.9",
-    "semver": "^7.3.4"
+    "semver": "^7.3.5"
   },
   "peerDependencies": {
     "eslint": "^7.16.0"
