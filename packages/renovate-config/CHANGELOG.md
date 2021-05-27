@@ -1,5 +1,11 @@
 # @ianwalter/renovate-config
 
+## 1.4.5
+
+### Patch Changes
+
+- 8ff4ee3: Grouping react and react-dom
+
 ## 1.4.4
 
 ### Patch Changes
