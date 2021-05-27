@@ -71,6 +71,13 @@
             "^@emotion"
           ],
           "groupName": "Emotion"
+        },
+        {
+          "matchPackageNames": [
+            "react",
+            "react-dom"
+          ],
+          "groupName": "React"
         }
       ],
       "reviewers": []
