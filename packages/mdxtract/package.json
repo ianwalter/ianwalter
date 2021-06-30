@@ -39,7 +39,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/generator": "^7.12.5",
+    "@babel/generator": "^7.14.5",
     "@babel/parser": "^7.12.7",
     "@babel/traverse": "^7.12.9",
     "@mdx-js/mdx": "^1.6.22",
