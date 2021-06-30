@@ -5,7 +5,7 @@ when developing multiple packages and applications. Here is how I set up
 monorepos and how I get Next.js apps to be able to use shared code in a common
 diretory within the monorepo.
 
-## Yarn workspaces
+## Yarn Workspaces
 
 I use a feature of Yarn called Yarn Workspaces to be able to use modules within
 the monorepo as if they are npm/node modules but without the having to do
@@ -30,4 +30,18 @@ reference that module in apps like this:
 
 ```js
 import TextField from 'shared/components/fields/TextField.js'
+```
+
+## Next.js configuration
+
+It takes a bit of configuration to be able to use the shared library with
+Next.js apps. First, you'll need to install `next-transpile-modules`. Then add
+something like the following to your `next.config.js`:
+
+```js
+const withTM = require('next-transpile-modules')(['shared'])
+
+module.exports = withTM({
+  // Your Next.js configuration goes here.
+}))
 ```
