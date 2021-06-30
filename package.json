@@ -45,7 +45,7 @@
     "@changesets/cli": "^2.13.1",
     "@ianwalter/eslint-config-react": "^4.1.0",
     "@ianwalter/renovate-config": "^1.4.3",
-    "ultra-runner": "^3.9.0"
+    "ultra-runner": "^3.10.5"
   },
   "eslintConfig": {
     "root": true,
