@@ -1783,6 +1783,20 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@generates/cli@^0.0.10":
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-0.0.10.tgz#5619dc958b3b8432101a6bc4e050b1ceee5be1ab"
+  integrity sha512-MO0UPi6uMT96VckR5s65cpnvQRGMT/52qOGest4Ot0ry+In2H2+ox2RQRiNWK8lSPHUf5n327qRlLrsbz1GllQ==
+  dependencies:
+    "@generates/dotter" "^2.0.0"
+    "@generates/logger" "^0.1.0"
+    "@generates/merger" "^0.1.0"
+    camelcase "^6.0.0"
+    common-tags "^1.8.0"
+    decamelize "^4.0.0"
+    getopts "^2.2.5"
+    read-pkg-up "^7.0.1"
+
 "@generates/cli@^0.0.9":
   version "0.0.9"
   resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-0.0.9.tgz#8d3c7aa341cadbec6e256d7245084d92c76e8ebf"
@@ -1797,7 +1811,7 @@
     getopts "^2.2.5"
     read-pkg-up "^7.0.1"
 
-"@generates/cli@^1.0.3":
+"@generates/cli@^1.0.0", "@generates/cli@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-1.0.3.tgz#21785859b35a126fc50ea7ea6a098987edd5308c"
   integrity sha512-J6IRNKDMmq04RH7wz/OVV+MPWWiiFZXhgyzaHfmTmox5PggAiWFSdIoqJewiQgMiRH9qtWSxGKUjcubkWeUPhg==
@@ -1831,6 +1845,24 @@
     has-ansi "^4.0.0"
     has-emoji "^1.1.0"
     marked "^1.1.1"
+    marked-terminal "^4.1.0"
+    strip-ansi "^6.0.0"
+
+"@generates/logger@^0.1.0":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@generates/logger/-/logger-0.1.2.tgz#fcf9d9ee60323a092ce51c3bb0baff4f5d6e5e09"
+  integrity sha512-tTQdLa5luH79IWaDx3pZGe5+qGjflQPewDm11dIGXXFw+MLt99Nz8tUlgQa71KLtOY51wcR2XmuVpXCNWjErsQ==
+  dependencies:
+    "@generates/cli" "^1.0.0"
+    "@generates/dotter" "^2.0.0"
+    "@generates/merger" "^0.1.0"
+    "@ianwalter/chromafi" "^1.0.1"
+    "@ianwalter/clone" "^6.0.1"
+    "@ianwalter/cloneable" "^2.0.0"
+    chalk "^4.1.0"
+    has-ansi "^4.0.0"
+    has-emoji "^1.1.0"
+    marked "^2.0.0"
     marked-terminal "^4.1.0"
     strip-ansi "^6.0.0"
 
@@ -1998,7 +2030,7 @@
     camelcase "^5.0.0"
 
 "@ianwalter/renovate-config@file:./packages/renovate-config":
-  version "1.4.4"
+  version "1.4.5"
 
 "@ianwalter/rollup-plugin-hashbang@^1.3.0":
   version "1.3.0"

@@ -43,7 +43,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@generates/cli": "^0.0.9",
+    "@generates/cli": "^0.0.10",
     "@generates/logger": "^0.0.9",
     "semver": "^7.3.4"
   },
