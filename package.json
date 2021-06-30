@@ -31,7 +31,7 @@
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@ianwalter/mdxtract": "^1.0.1",
-    "@mapbox/rehype-prism": "^0.6.0",
+    "@mapbox/rehype-prism": "^0.7.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.0.1",
     "common-tags": "^1.8.0",
