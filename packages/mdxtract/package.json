@@ -43,7 +43,7 @@
     "@babel/parser": "^7.14.7",
     "@babel/traverse": "^7.12.9",
     "@mdx-js/mdx": "^1.6.22",
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^3.1.0"
   },
   "devDependencies": {
     "@ianwalter/bff": "^11.0.0"
