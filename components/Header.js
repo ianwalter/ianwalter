@@ -1,39 +1,40 @@
-import { Flex, Heading, Box } from '@chakra-ui/react'
+// import { Flex, Heading, Box } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { GrGithub, GrTwitter } from 'react-icons/gr'
+import { StyledDiv } from '@generates/swag'
 
 export default function Header () {
   return (
-    <Flex alignItems="center">
+    <div alignItems="center">
 
       <NextLink href="/">
         <a>
-          <Heading as="h1" fontSize="2xl" color="green.200">
+          <h1 fontSize="2xl" color="green.200">
             Ian Walter
-          </Heading>
+          </h1>
         </a>
       </NextLink>
 
-      <Flex ml="auto" color="gray.400">
+      <div ml="auto" color="gray.400">
 
-        <Box>
+        <StyledDiv>
           <NextLink href="https://github.com/ianwalter">
             <a aria-label="GitHub">
               <GrGithub />
             </a>
           </NextLink>
-        </Box>
+        </StyledDiv>
 
-        <Box ml={6}>
+        <StyledDiv ml={6}>
           <NextLink href="https://twitter.com/IanWalter">
             <a aria-label="Twitter">
               <GrTwitter />
             </a>
           </NextLink>
-        </Box>
+        </StyledDiv>
 
-      </Flex>
+      </div>
 
-    </Flex>
+    </div>
   )
 }

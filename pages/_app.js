@@ -1,17 +1,21 @@
 import '../styles.css'
 import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
-import {
-  ChakraProvider,
-  Heading,
-  Box,
-  Link,
-  Code,
-  UnorderedList
-} from '@chakra-ui/react'
-import theme from '../lib/theme.js'
+import { globalCss } from '@stitches/react'
+import Router from 'next/router'
+import nprogress from 'nprogress'
+import { StyledDiv, StyledLink } from '@generates/swag'
 import Layout from '../components/Layout.js'
 import CodeCaption from '../components/CodeCaption.js'
+
+const globalStyles = globalCss({
+  body: { backgroundColor: '#18181B', color: '#D4D4D4' }
+})
+
+nprogress.configure({ showSpinner: false })
+Router.events.on('routeChangeStart', () => nprogress.start())
+Router.events.on('routeChangeComplete', () => nprogress.done())
+Router.events.on('routeChangeError', () => nprogress.done())
 
 const components = {
   wrapper: function Wrapper ({ children, ...props }) {
@@ -32,19 +36,19 @@ const components = {
     )
   },
   h1: function H1 (props) {
-    return <Heading as="h1" my={6} {...props} />
+    return <StyledDiv as="h1" my={6} {...props} />
   },
   h2: function H2 (props) {
-    return <Heading as="h2" size="lg" my={6} {...props} />
+    return <StyledDiv as="h2" size="lg" my={6} {...props} />
   },
   h3: function H3 (props) {
-    return <Heading as="h3" size="md" my={6} {...props} />
+    return <StyledDiv as="h3" size="md" my={6} {...props} />
   },
   p: function P (props) {
-    return <Box as="p" my={6} {...props} />
+    return <StyledDiv as="p" my={6} {...props} />
   },
   a: function A (props) {
-    return <Link
+    return <StyledLink
       color="blue.200"
       fontWeight="medium"
       isExternal={props.href.indexOf('http') === 0}
@@ -52,11 +56,12 @@ const components = {
     />
   },
   ul: function Ul (props) {
-    return <UnorderedList {...props} />
+    return <StyledDiv as="ul" {...props} />
   },
   inlineCode: function InlineCode (props) {
     return (
-      <Code
+      <StyledDiv
+        as="code"
         colorScheme="purple"
         fontSize="md"
         borderRadius={3}
@@ -69,11 +74,11 @@ const components = {
 }
 
 export default function App ({ Component, pageProps }) {
+  globalStyles()
+
   return (
-    <ChakraProvider theme={theme}>
-      <MDXProvider components={components}>
-        <Component {...pageProps} />
-      </MDXProvider>
-    </ChakraProvider>
+    <MDXProvider components={components}>
+      <Component {...pageProps} />
+    </MDXProvider>
   )
 }

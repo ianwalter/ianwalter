@@ -1,8 +1,8 @@
-import { Box } from '@chakra-ui/react'
+import { StyledDiv } from '@generates/swag'
 
 export default function CodeCaption ({ children, ...props }) {
   return (
-    <Box
+    <StyledDiv
       mt={-5}
       mb={5}
       color="gray.400"
@@ -11,6 +11,6 @@ export default function CodeCaption ({ children, ...props }) {
       {...props}
     >
       {children}
-    </Box>
+    </StyledDiv>
   )
 }
