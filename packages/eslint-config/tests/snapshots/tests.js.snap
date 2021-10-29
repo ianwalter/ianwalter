@@ -2,7 +2,7 @@
 
 exports[`fail 1`] = `
 Object {
-  "errorCount": 9,
+  "errorCount": 10,
   "filePath": StringContaining "tests/fixtures/fail.js",
   "fixableErrorCount": 6,
   "fixableWarningCount": 0,
@@ -148,6 +148,17 @@ function",
       "messageId": "multipleSpaces",
       "nodeType": "String",
       "ruleId": "no-multi-spaces",
+      "severity": 2,
+    },
+    Object {
+      "column": 20,
+      "endColumn": 27,
+      "endLine": 15,
+      "line": 15,
+      "message": "Identifier 'a_space' is not in camel case.",
+      "messageId": "notCamelCase",
+      "nodeType": "Identifier",
+      "ruleId": "camelcase",
       "severity": 2,
     },
     Object {
