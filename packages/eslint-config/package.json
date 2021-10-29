@@ -1,0 +1,52 @@
+{
+  "name": "@ianwalter/eslint-config",
+  "description": "Ian's ESLint configuration based on Standard",
+  "version": "6.2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/ianwalter.git",
+    "directory": "packages/eslint-config"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "preset"
+  ],
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ianwalter/ianwalter/issues"
+  },
+  "homepage": "https://github.com/ianwalter/ianwalter/blob/main/packages/eslint-config#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ianwalter"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js tests/tests.js tests/fixtures/pass.js",
+    "test": "bff"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js",
+    ".eslintrc.json"
+  ],
+  "dependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.1.0"
+  },
+  "devDependencies": {
+    "@ianwalter/bff": "^9.13.0"
+  }
+}
