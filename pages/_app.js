@@ -1,10 +1,9 @@
 import '../styles.css'
 import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
-import { globalCss } from '@stitches/react'
 import Router from 'next/router'
 import nprogress from 'nprogress'
-import { StyledEl } from '@generates/swag'
+import { globalCss, StyledEl } from '@generates/swag'
 import Layout from '../components/Layout.js'
 import Link from '../components/Link.js'
 import CodeCaption from '../components/CodeCaption.js'
@@ -21,9 +20,9 @@ const globalStyles = globalCss({
       "Lucida Grande",
       sans-serif
     `,
-    backgroundColor: 'rgb(23, 25, 35)',
+    backgroundColor: '$trueGray900',
     fontSize: '1.25rem',
-    color: '#F3F4F6',
+    color: '$coolGray100',
     lineHeight: '1.75',
     textRendering: 'optimizeLegibility',
     '-webkit-font-smoothing': 'antialiased',
