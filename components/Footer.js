@@ -7,7 +7,7 @@ export default function Footer () {
         marginTop: '8rem',
         marginBottom: '3rem',
         color: '$coolGray400',
-        fontSize: '14px',
+        fontSize: '0.875rem',
         textAlign: 'center'
       }}
     >

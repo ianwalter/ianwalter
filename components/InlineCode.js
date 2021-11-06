@@ -6,6 +6,5 @@ export default styled('code', {
   color: '$purple300',
   backgroundColor: 'rgba(214, 188, 250, 0.16)',
   px: '0.5rem',
-  borderRadius: '0.25rem',
-  fontSize: '80%'
+  borderRadius: '0.25rem'
 })
