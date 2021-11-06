@@ -8,7 +8,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ianwalter/renovate-config.git"
+    "url": "git+https://github.com/ianwalter/ianwalter.git",
+    "directory": "packages/renovate-config"
   },
   "keywords": [
     "renovate",
@@ -24,11 +25,14 @@
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/ianwalter/renovate-config/issues"
+    "url": "https://github.com/ianwalter/ianwalter/issues"
   },
-  "homepage": "https://github.com/ianwalter/renovate-config#readme",
+  "homepage": "https://github.com/ianwalter/ianwalter/blob/main/packages/renovate-config#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ianwalter"
+  },
   "devDependencies": {
-    "@changesets/cli": "^2.16.0",
     "@ianwalter/renovate-config": "file:./",
     "renovate": "^24.47.0"
   },

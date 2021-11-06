@@ -1,16 +1,18 @@
-import { Box } from '@chakra-ui/react'
+import { StyledEl } from '@generates/swag'
 
 export default function CodeCaption ({ children, ...props }) {
   return (
-    <Box
-      mt={-5}
-      mb={5}
-      color="gray.400"
-      textAlign="center"
-      fontSize="85%"
+    <StyledEl
+      css={{
+        marginTop: '-1rem',
+        marginBottom: '2rem',
+        color: '$blueGray400',
+        textAlign: 'center',
+        fontSize: '80%'
+      }}
       {...props}
     >
       {children}
-    </Box>
+    </StyledEl>
   )
 }

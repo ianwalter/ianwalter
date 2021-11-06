@@ -1,39 +1,49 @@
-import { Flex, Heading, Box } from '@chakra-ui/react'
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { GrGithub, GrTwitter } from 'react-icons/gr'
+import { StyledEl } from '@generates/swag'
 
 export default function Header () {
   return (
-    <Flex alignItems="center">
+    <StyledEl css={{ display: 'flex', alignItems: 'center' }}>
 
-      <NextLink href="/">
-        <a>
-          <Heading as="h1" fontSize="2xl" color="green.200">
+      <Link href="/" passHref>
+        <StyledEl as="a" css={{ textDecoration: 'none' }}>
+          <StyledEl
+            as="h1"
+            css={{ fontSize: '24px', color: '$emerald200', margin: 0 }}
+          >
             Ian Walter
-          </Heading>
-        </a>
-      </NextLink>
+          </StyledEl>
+        </StyledEl>
+      </Link>
 
-      <Flex ml="auto" color="gray.400">
+      <StyledEl
+        css={{
+          display: 'flex',
+          alignItems: 'center',
+          marginLeft: 'auto',
+          color: '$blueGray400'
+        }}
+      >
 
-        <Box>
-          <NextLink href="https://github.com/ianwalter">
-            <a aria-label="GitHub">
-              <GrGithub />
-            </a>
-          </NextLink>
-        </Box>
+        <StyledEl>
+          <Link href="https://github.com/ianwalter" passHref>
+            <StyledEl as="a" aria-label="GitHub" css={{ color: 'inherit' }}>
+              <GrGithub style={{ display: 'block' }} />
+            </StyledEl>
+          </Link>
+        </StyledEl>
 
-        <Box ml={6}>
-          <NextLink href="https://twitter.com/IanWalter">
-            <a aria-label="Twitter">
-              <GrTwitter />
-            </a>
-          </NextLink>
-        </Box>
+        <StyledEl css={{ marginLeft: '1.5rem' }}>
+          <Link href="https://twitter.com/IanWalter" passHref>
+            <StyledEl as="a" aria-label="Twitter" css={{ color: 'inherit' }}>
+              <GrTwitter style={{ display: 'block' }} />
+            </StyledEl>
+          </Link>
+        </StyledEl>
 
-      </Flex>
+      </StyledEl>
 
-    </Flex>
+    </StyledEl>
   )
 }

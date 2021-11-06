@@ -1,9 +1,17 @@
-import { Box } from '@chakra-ui/react'
+import { StyledEl } from '@generates/swag'
 
 export default function Footer () {
   return (
-    <Box mt={32} mb={12} color="gray.400" fontSize="sm" textAlign="center">
+    <StyledEl
+      css={{
+        marginTop: '8rem',
+        marginBottom: '3rem',
+        color: '$coolGray400',
+        fontSize: '0.875rem',
+        textAlign: 'center'
+      }}
+    >
       Copyright © 2020 Ian Walter
-    </Box>
+    </StyledEl>
   )
 }

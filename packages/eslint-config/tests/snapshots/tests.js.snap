@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fail 1`] = `
+Object {
+  "errorCount": 10,
+  "filePath": StringContaining "tests/fixtures/fail.js",
+  "fixableErrorCount": 6,
+  "fixableWarningCount": 0,
+  "messages": Array [
+    Object {
+      "column": 18,
+      "endColumn": 19,
+      "endLine": 1,
+      "fix": Object {
+        "range": Array [
+          17,
+          17,
+        ],
+        "text": " ",
+      },
+      "line": 1,
+      "message": "Missing space before function parentheses.",
+      "messageId": "missingSpace",
+      "nodeType": "FunctionDeclaration",
+      "ruleId": "space-before-function-paren",
+      "severity": 2,
+    },
+    Object {
+      "column": 10,
+      "endColumn": 17,
+      "endLine": 2,
+      "fix": Object {
+        "range": Array [
+          31,
+          38,
+        ],
+        "text": "'Hello'",
+      },
+      "line": 2,
+      "message": "Strings must use singlequote.",
+      "messageId": "wrongQuotes",
+      "nodeType": "Literal",
+      "ruleId": "quotes",
+      "severity": 2,
+    },
+    Object {
+      "column": 15,
+      "endColumn": 16,
+      "endLine": 5,
+      "fix": Object {
+        "range": Array [
+          57,
+          57,
+        ],
+        "text": " ",
+      },
+      "line": 5,
+      "message": "A space is required after '{'.",
+      "messageId": "requireSpaceAfter",
+      "nodeType": "ObjectExpression",
+      "ruleId": "object-curly-spacing",
+      "severity": 2,
+    },
+    Object {
+      "column": 28,
+      "endColumn": 29,
+      "endLine": 5,
+      "fix": Object {
+        "range": Array [
+          69,
+          69,
+        ],
+        "text": " ",
+      },
+      "line": 5,
+      "message": "A space is required before '}'.",
+      "messageId": "requireSpaceBefore",
+      "nodeType": "ObjectExpression",
+      "ruleId": "object-curly-spacing",
+      "severity": 2,
+    },
+    Object {
+      "column": 10,
+      "endColumn": 14,
+      "endLine": 7,
+      "line": 7,
+      "message": "'long' is defined but never used.",
+      "messageId": "unusedVar",
+      "nodeType": "Identifier",
+      "ruleId": "no-unused-vars",
+      "severity": 2,
+    },
+    Object {
+      "column": 1,
+      "endColumn": 87,
+      "endLine": 8,
+      "line": 8,
+      "message": "This line has a length of 86. Maximum allowed is 80.",
+      "messageId": "max",
+      "nodeType": "Program",
+      "ruleId": "max-len",
+      "severity": 1,
+    },
+    Object {
+      "column": 2,
+      "endColumn": 3,
+      "endLine": 9,
+      "fix": Object {
+        "range": Array [
+          178,
+          190,
+        ],
+        "text": "}
+
+function",
+      },
+      "line": 9,
+      "message": "Unnecessary semicolon.",
+      "messageId": "unexpected",
+      "nodeType": "EmptyStatement",
+      "ruleId": "no-extra-semi",
+      "severity": 2,
+    },
+    Object {
+      "column": 10,
+      "endColumn": 17,
+      "endLine": 11,
+      "line": 11,
+      "message": "Identifier 'a_space' is not in camel case.",
+      "messageId": "notCamelCase",
+      "nodeType": "Identifier",
+      "ruleId": "camelcase",
+      "severity": 2,
+    },
+    Object {
+      "column": 9,
+      "endColumn": 12,
+      "endLine": 12,
+      "fix": Object {
+        "range": Array [
+          212,
+          215,
+        ],
+        "text": " ",
+      },
+      "line": 12,
+      "message": "Multiple spaces found before '' ''.",
+      "messageId": "multipleSpaces",
+      "nodeType": "String",
+      "ruleId": "no-multi-spaces",
+      "severity": 2,
+    },
+    Object {
+      "column": 20,
+      "endColumn": 27,
+      "endLine": 15,
+      "line": 15,
+      "message": "Identifier 'a_space' is not in camel case.",
+      "messageId": "notCamelCase",
+      "nodeType": "Identifier",
+      "ruleId": "camelcase",
+      "severity": 2,
+    },
+    Object {
+      "column": 20,
+      "endColumn": 27,
+      "endLine": 15,
+      "line": 15,
+      "message": "Identifier 'a_space' is not in camel case.",
+      "messageId": "notCamelCase",
+      "nodeType": "Identifier",
+      "ruleId": "camelcase",
+      "severity": 2,
+    },
+  ],
+  "source": "function greeting() {
+  return \\"Hello\\"
+}
+
+const thing = {status: 'ok'}
+
+function long () {
+  return [thing, thing, thing, thing, thing, thing, thing, thing, thing, thing, thing]
+};
+
+function a_space () {
+  return   ' '
+}
+
+export { greeting, a_space }
+",
+  "warningCount": 1,
+}
+`;
+
+exports[`pass 1`] = `
+Object {
+  "errorCount": 0,
+  "filePath": StringContaining "tests/fixtures/pass.js",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": Array [],
+  "warningCount": 0,
+}
+`;

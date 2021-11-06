@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "standard"
+  ],
+  "rules": {
+    "max-len": [
+      "warn",
+      {
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "require-atomic-updates": 0
+  }
+}

@@ -1,19 +1,29 @@
-import { Box } from '@chakra-ui/react'
+import { StyledEl } from '@generates/swag'
 import Header from './Header.js'
 import Footer from './Footer.js'
 
 export default function Layout (props) {
   return (
-    <Box maxWidth="4xl" mx="auto" px={[6, 6, 6, 6, 0]} pt={12}>
+    <StyledEl
+      css={{
+        maxWidth: '56rem',
+        mx: 'auto',
+        paddingTop: '2rem',
+        px: '1.5rem',
+        '@lg': {
+          px: 0
+        }
+      }}
+    >
 
       <Header />
 
-      <Box as="main" mt={12}>
+      <StyledEl as="main" css={{ marginTop: '2.5rem' }}>
         {props.children}
-      </Box>
+      </StyledEl>
 
       <Footer />
 
-    </Box>
+    </StyledEl>
   )
 }
