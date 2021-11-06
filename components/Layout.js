@@ -1,20 +1,27 @@
 // import { Box } from '@chakra-ui/react'
-import { StyledDiv } from '@generates/swag'
+import { StyledEl } from '@generates/swag'
 import Header from './Header.js'
 import Footer from './Footer.js'
 
 export default function Layout (props) {
   return (
-    <StyledDiv maxWidth="4xl" mx="auto" px={[6, 6, 6, 6, 0]} pt={12}>
+    <StyledEl
+      css={{
+        maxWidth: '56rem',
+        mx: 'auto',
+        px: [6, 6, 6, 6, 0],
+        paddingTop: '2rem'
+      }}
+    >
 
       <Header />
 
-      <StyledDiv as="main" mt={12}>
+      <StyledEl as="main" css={{ marginTop: '2.5rem' }}>
         {props.children}
-      </StyledDiv>
+      </StyledEl>
 
       <Footer />
 
-    </StyledDiv>
+    </StyledEl>
   )
 }

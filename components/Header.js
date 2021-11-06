@@ -1,40 +1,50 @@
 // import { Flex, Heading, Box } from '@chakra-ui/react'
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { GrGithub, GrTwitter } from 'react-icons/gr'
-import { StyledDiv } from '@generates/swag'
+import { StyledEl } from '@generates/swag'
 
 export default function Header () {
   return (
-    <div alignItems="center">
+    <StyledEl css={{ display: 'flex', alignItems: 'center' }}>
 
-      <NextLink href="/">
-        <a>
-          <h1 fontSize="2xl" color="green.200">
+      <Link href="/" passHref>
+        <StyledEl as="a" css={{ textDecoration: 'none' }}>
+          <StyledEl
+            as="h1"
+            css={{ fontSize: '24px', color: '$emerald200', margin: 0 }}
+          >
             Ian Walter
-          </h1>
-        </a>
-      </NextLink>
+          </StyledEl>
+        </StyledEl>
+      </Link>
 
-      <div ml="auto" color="gray.400">
+      <StyledEl
+        css={{
+          display: 'flex',
+          alignItems: 'center',
+          marginLeft: 'auto',
+          color: '$blueGray400'
+        }}
+      >
 
-        <StyledDiv>
-          <NextLink href="https://github.com/ianwalter">
-            <a aria-label="GitHub">
-              <GrGithub />
-            </a>
-          </NextLink>
-        </StyledDiv>
+        <StyledEl>
+          <Link href="https://github.com/ianwalter" passHref>
+            <StyledEl as="a" aria-label="GitHub" css={{ color: 'inherit' }}>
+              <GrGithub style={{ display: 'block' }} />
+            </StyledEl>
+          </Link>
+        </StyledEl>
 
-        <StyledDiv ml={6}>
-          <NextLink href="https://twitter.com/IanWalter">
-            <a aria-label="Twitter">
-              <GrTwitter />
-            </a>
-          </NextLink>
-        </StyledDiv>
+        <StyledEl css={{ marginLeft: '1.5rem' }}>
+          <Link href="https://twitter.com/IanWalter" passHref>
+            <StyledEl as="a" aria-label="Twitter" css={{ color: 'inherit' }}>
+              <GrTwitter style={{ display: 'block' }} />
+            </StyledEl>
+          </Link>
+        </StyledEl>
 
-      </div>
+      </StyledEl>
 
-    </div>
+    </StyledEl>
   )
 }

@@ -1,15 +1,17 @@
-import { StyledDiv } from '@generates/swag'
+import { StyledEl } from '@generates/swag'
 
 export default function Footer () {
   return (
-    <StyledDiv
-      mt={32}
-      mb={12}
-      color="gray.400"
-      fontSize="sm"
-      textAlign="center"
+    <StyledEl
+      css={{
+        marginTop: '8rem',
+        marginBottom: '3rem',
+        color: '$coolGray400',
+        fontSize: '14px',
+        textAlign: 'center'
+      }}
     >
       Copyright © 2020 Ian Walter
-    </StyledDiv>
+    </StyledEl>
   )
 }

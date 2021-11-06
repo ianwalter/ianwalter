@@ -1,27 +1,27 @@
 import NextLink from 'next/link'
-// import { Box, Heading, UnorderedList, ListItem, Link } from '@chakra-ui/react'
-import { StyledDiv, StyledLink } from '@generates/swag'
+import { StyledEl } from '@generates/swag'
+import Link from '../components/Link.js'
 
 export default function LatestPosts (props) {
   return (
-    <StyledDiv mt={12}>
+    <StyledEl css={{ marginTop: '2.5rem' }}>
 
-      <h2 as="h2" size="lg">
+      <StyledEl as="h2" css={{ margin: 0, fontSize: '30px' }}>
         My latest posts 💬
-      </h2>
+      </StyledEl>
 
-      <ul mt={6} color="gray.400">
+      <StyledEl as="ul" css={{ paddingLeft: '1.5rem', color: '$blueGray400' }}>
         {props.posts && props.posts.map(post => (
-          <li key={post.url}>
+          <StyledEl as="li" key={post.url} css={{ my: '.25rem' }}>
             <NextLink href={post.url} passHref>
-              <StyledLink color="blue.200" fontWeight="medium">
+              <Link css={{ fontWeight: '500' }}>
                 {post.title}
-              </StyledLink>
+              </Link>
             </NextLink>
-          </li>
+          </StyledEl>
         ))}
-      </ul>
+      </StyledEl>
 
-    </StyledDiv>
+    </StyledEl>
   )
 }
