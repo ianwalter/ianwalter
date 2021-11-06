@@ -1,4 +1,3 @@
-// import { Box } from '@chakra-ui/react'
 import { StyledEl } from '@generates/swag'
 import Header from './Header.js'
 import Footer from './Footer.js'
@@ -9,8 +8,11 @@ export default function Layout (props) {
       css={{
         maxWidth: '56rem',
         mx: 'auto',
-        px: [6, 6, 6, 6, 0],
-        paddingTop: '2rem'
+        paddingTop: '2rem',
+        px: '1.5rem',
+        '@lg': {
+          px: 0
+        }
       }}
     >
 

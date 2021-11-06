@@ -1,4 +1,3 @@
-// import { Flex, Heading, Box } from '@chakra-ui/react'
 import Link from 'next/link'
 import { GrGithub, GrTwitter } from 'react-icons/gr'
 import { StyledEl } from '@generates/swag'

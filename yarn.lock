@@ -1371,10 +1371,10 @@
     "@generates/modulizer" "^7.0.2"
     koa-compose "^4.1.0"
 
-"@generates/swag@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@generates/swag/-/swag-1.0.0.tgz#c603869b21e8c87c2c635d41d5ba48af51026ea6"
-  integrity sha512-ViSGcEaqPxRvkbzJIYFVEwncKoEpC/w2SphRcMwZfCHwlcZH9mGjauFav9VNa8M77B0I4prYoY6+CWHBkrkNiA==
+"@generates/swag@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@generates/swag/-/swag-1.1.0.tgz#c47b028dd4d61e458fd8856e0bc07f7eb6ff38c8"
+  integrity sha512-ziPgEEgQxX49bWt8azLlHGcjU4jfH7+qKTOYAgqMO9WZv+vPuciBICvT+s1AYhIbnNVaRanZ+nr0KMyXS/T2Pw==
   dependencies:
     "@generates/merger" "^0.1.3"
     common-tags "^1.8.0"

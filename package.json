@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/ianwalter/ianwalter#readme",
   "dependencies": {
-    "@generates/swag": "^1.0.0",
+    "@generates/swag": "^1.1.0",
     "@ianwalter/mdxtract": "^1.0.1",
     "@mapbox/rehype-prism": "^0.6.0",
     "@mdx-js/loader": "^1.6.22",
