@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@generates/cli": "^0.0.10",
-    "@generates/logger": "^1.0.0",
+    "@generates/logger": "^2.0.2",
     "semver": "^7.3.5"
   },
   "peerDependencies": {
