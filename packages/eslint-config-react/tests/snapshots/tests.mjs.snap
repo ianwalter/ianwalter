@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fail 1`] = `
+Object {
+  "errorCount": 5,
+  "filePath": StringContaining "tests/fixtures/fail.jsx",
+  "fixableErrorCount": 4,
+  "fixableWarningCount": 0,
+  "messages": Array [
+    Object {
+      "column": 27,
+      "endColumn": 35,
+      "endLine": 1,
+      "fix": Object {
+        "range": Array [
+          26,
+          34,
+        ],
+        "text": "'preact'",
+      },
+      "line": 1,
+      "message": "Strings must use singlequote.",
+      "messageId": "wrongQuotes",
+      "nodeType": "Literal",
+      "ruleId": "quotes",
+      "severity": 2,
+    },
+    Object {
+      "column": 13,
+      "endColumn": 29,
+      "endLine": 6,
+      "fix": Object {
+        "range": Array [
+          78,
+          83,
+        ],
+        "text": "className",
+      },
+      "line": 6,
+      "message": "Unknown property 'class' found, use 'className' instead",
+      "messageId": "unknownProp",
+      "nodeType": "JSXAttribute",
+      "ruleId": "react/no-unknown-property",
+      "severity": 2,
+    },
+    Object {
+      "column": 28,
+      "endColumn": 30,
+      "endLine": 7,
+      "fix": Object {
+        "range": Array [
+          143,
+          145,
+        ],
+        "text": " ",
+      },
+      "line": 7,
+      "message": "Multiple spaces found before '{'.",
+      "messageId": "multipleSpaces",
+      "nodeType": "Punctuator",
+      "ruleId": "no-multi-spaces",
+      "severity": 2,
+    },
+    Object {
+      "column": 15,
+      "endColumn": 21,
+      "endLine": 8,
+      "line": 8,
+      "message": "'target' is assigned a value but never used.",
+      "messageId": "unusedVar",
+      "nodeType": "Identifier",
+      "ruleId": "no-unused-vars",
+      "severity": 2,
+    },
+    Object {
+      "column": 21,
+      "endColumn": 22,
+      "endLine": 9,
+      "fix": Object {
+        "range": Array [
+          198,
+          208,
+        ],
+        "text": ")
+      }",
+      },
+      "line": 9,
+      "message": "Extra semicolon.",
+      "messageId": "extraSemi",
+      "nodeType": "ExpressionStatement",
+      "ruleId": "semi",
+      "severity": 2,
+    },
+  ],
+  "source": "import { h, render } from \\"preact\\"
+
+render(
+  (
+  <div id=\\"foo\\" >
+      <span class=\\"greeting\\">Hello, world!</span>
+      <button onClick={e =>  {
+        const target = e.target
+        alert('hi!');
+      }}>Click Me</button>
+    </div>
+  ),
+  document.getElementById('app')
+)
+",
+  "warningCount": 0,
+}
+`;
+
+exports[`pass 1`] = `
+Object {
+  "errorCount": 0,
+  "filePath": StringContaining "tests/fixtures/pass.jsx",
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "messages": Array [],
+  "warningCount": 0,
+}
+`;

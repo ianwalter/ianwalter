@@ -1,0 +1,50 @@
+{
+  "name": "@ianwalter/eslint-config-react",
+  "description": "Ian's ESLint configuration for React and Preact",
+  "version": "4.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/ianwalter.git",
+    "directory": "packages/eslint-config-react"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "preset"
+  ],
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ianwalter/ianwalter/issues"
+  },
+  "homepage": "https://github.com/ianwalter/ianwalter/blob/main/packages/eslint-config-react#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ianwalter"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "bff"
+  },
+  "files": [
+    ".eslintrc.json",
+    "index.js",
+    "preact.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ianwalter/eslint-config": "^6.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "devDependencies": {
+    "@ianwalter/bff": "^11.2.0"
+  }
+}

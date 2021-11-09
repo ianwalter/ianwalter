@@ -26,10 +26,6 @@ In `package.json`:
 
 * [`@ianwalter/eslint-config-react`][reactUrl] - Ian's ESLint configuration for
   React and Preact
-* [`@ianwalter/eslint-config-vue`][vueUrl] - Ian's ESLint configuration for
-  Vue.js
-* [`@ianwalter/eslint-config-svelte`][svelteUrl] - Ian's ESLint configuration for
-  Svelte
 
 ## License
 
@@ -39,11 +35,9 @@ Apache 2.0 with Commons Clause - See [LICENSE][licenseUrl]
 
 Created by [Ian Walter](https://ianwalter.dev)
 
-[eslintUrl]: https://eslint.org/
-[standardUrl]: https://standardjs.com/
+[eslintUrl]: https://eslint.org
+[standardUrl]: https://standardjs.com
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/eslint-config.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/eslint-config
-[reactUrl]: https://github.com/ianwalter/eslint-config-react
-[vueUrl]: https://github.com/ianwalter/eslint-config-vue
-[svelteUrl]: https://github.com/ianwalter/eslint-config-svelte
-[licenseUrl]: https://github.com/ianwalter/eslint-config/blob/master/LICENSE
+[reactUrl]: hthttps://github.com/ianwalter/ianwalter/blob/main/packages/eslint-config-react
+[licenseUrl]: https://github.com/ianwalter/ianwalter/blob/main/packages/eslint-config/LICENSE
