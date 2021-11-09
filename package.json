@@ -29,7 +29,7 @@
   "dependencies": {
     "@generates/swag": "^1.1.0",
     "@ianwalter/mdxtract": "^1.0.1",
-    "@mapbox/rehype-prism": "^0.6.0",
+    "@mapbox/rehype-prism": "^0.8.0",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^12.0.3",
     "@stitches/react": "^1.2.5",
