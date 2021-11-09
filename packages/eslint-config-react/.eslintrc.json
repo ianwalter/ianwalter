@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "@ianwalter",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "settings": {
+    "react": {
+      "version": "16.8"
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "react/prop-types": 1
+  }
+}
