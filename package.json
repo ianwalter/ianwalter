@@ -3,7 +3,7 @@
   "name": "ianwalter",
   "version": "0.0.1",
   "scripts": {
-    "lint": "eslit .",
+    "lint": "eslint .",
     "gen:readme": "node scripts/generateReadme",
     "dev": "next dev",
     "build": "next build",
@@ -59,7 +59,8 @@
   },
   "eslintIgnore": [
     "packages/eslit/fixtures/fail.js",
-    "packages/eslint-config/tests/fixtures/fail.js"
+    "packages/eslint-config/tests/fixtures/fail.js",
+    "archived"
   ],
   "renovate": {
     "extends": [
