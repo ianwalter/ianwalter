@@ -3,6 +3,7 @@
 exports[`fail 1`] = `
 Object {
   "errorCount": 10,
+  "fatalErrorCount": 0,
   "filePath": StringContaining "tests/fixtures/fail.js",
   "fixableErrorCount": 6,
   "fixableWarningCount": 0,
@@ -196,6 +197,7 @@ export { greeting, a_space }
 exports[`pass 1`] = `
 Object {
   "errorCount": 0,
+  "fatalErrorCount": 0,
   "filePath": StringContaining "tests/fixtures/pass.js",
   "fixableErrorCount": 0,
   "fixableWarningCount": 0,
