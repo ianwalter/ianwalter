@@ -1213,21 +1213,7 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@generates/cli@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-0.0.10.tgz#5619dc958b3b8432101a6bc4e050b1ceee5be1ab"
-  integrity sha512-MO0UPi6uMT96VckR5s65cpnvQRGMT/52qOGest4Ot0ry+In2H2+ox2RQRiNWK8lSPHUf5n327qRlLrsbz1GllQ==
-  dependencies:
-    "@generates/dotter" "^2.0.0"
-    "@generates/logger" "^0.1.0"
-    "@generates/merger" "^0.1.0"
-    camelcase "^6.0.0"
-    common-tags "^1.8.0"
-    decamelize "^4.0.0"
-    getopts "^2.2.5"
-    read-pkg-up "^7.0.1"
-
-"@generates/cli@^1.0.0", "@generates/cli@^1.0.3":
+"@generates/cli@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-1.0.3.tgz#21785859b35a126fc50ea7ea6a098987edd5308c"
   integrity sha512-J6IRNKDMmq04RH7wz/OVV+MPWWiiFZXhgyzaHfmTmox5PggAiWFSdIoqJewiQgMiRH9qtWSxGKUjcubkWeUPhg==
@@ -1241,7 +1227,7 @@
     getopts "^2.2.5"
     read-pkg-up "^7.0.1"
 
-"@generates/cli@^2.0.0", "@generates/cli@^2.0.1":
+"@generates/cli@^2.0.0", "@generates/cli@^2.0.1", "@generates/cli@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@generates/cli/-/cli-2.0.2.tgz#2ae85ef619b9503dc6dadd839596e2a0d11b20b0"
   integrity sha512-A+loGmXXyeUumquHpJshpn/HJ3jBcjfv3wQXORObChE6YF+5baKbSrvngtb1rqyarGxYW4T6agI5f8a3Lwjl4A==
@@ -1259,24 +1245,6 @@
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@generates/dotter/-/dotter-2.0.3.tgz#a03dc32151291e5b84cc2bddc831a8d10e1a9c50"
   integrity sha512-c6Wdfn4+1YKR9J+dg2Eenogd7halDT98oRyIKCyQmlyxTpSaX+CFFxA24krFPKUQOrPiHwLNx1MoWWoDw0x/LQ==
-
-"@generates/logger@^0.1.0":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@generates/logger/-/logger-0.1.2.tgz#fcf9d9ee60323a092ce51c3bb0baff4f5d6e5e09"
-  integrity sha512-tTQdLa5luH79IWaDx3pZGe5+qGjflQPewDm11dIGXXFw+MLt99Nz8tUlgQa71KLtOY51wcR2XmuVpXCNWjErsQ==
-  dependencies:
-    "@generates/cli" "^1.0.0"
-    "@generates/dotter" "^2.0.0"
-    "@generates/merger" "^0.1.0"
-    "@ianwalter/chromafi" "^1.0.1"
-    "@ianwalter/clone" "^6.0.1"
-    "@ianwalter/cloneable" "^2.0.0"
-    chalk "^4.1.0"
-    has-ansi "^4.0.0"
-    has-emoji "^1.1.0"
-    marked "^2.0.0"
-    marked-terminal "^4.1.0"
-    strip-ansi "^6.0.0"
 
 "@generates/logger@^1.0.0":
   version "1.0.0"
