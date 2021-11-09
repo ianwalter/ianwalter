@@ -52,6 +52,5 @@ Created by [Ian Walter](https://ianwalter.dev)
 [preactUrl]: https://preactjs.com/
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/eslint-config-react.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/eslint-config-react
-[configUrl]: https://github.com/ianwalter/eslint-config
-[vueUrl]: https://github.com/ianwalter/eslint-config-vue
+[configUrl]: https://github.com/ianwalter/ianwalter/blob/main/packages/eslint-config
 [licenseUrl]: https://github.com/ianwalter/ianwalter/blob/main/packages/eslint-config-react/LICENSE
