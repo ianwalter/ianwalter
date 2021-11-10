@@ -11,7 +11,7 @@ test('pass', async t => {
 })
 
 test('fail', async t => {
-  const lint = new ESLint({ overrideConfigFile: 'preact.js' })
+  const lint = new ESLint({ overrideConfigFile: '/Users/ian/ianwalter/ianwalter/packages/eslint-config-react/preact.js' })
   const file = 'tests/fixtures/fail.jsx'
   const [fail] = await lint.lintFiles([file])
   t.expect(fail).toMatchSnapshot({ filePath: t.expect.stringContaining(file) })

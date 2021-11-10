@@ -1,6 +1,9 @@
 {
   "root": true,
   "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false
+  },
   "extends": [
     "@ianwalter",
     "plugin:react/recommended",
