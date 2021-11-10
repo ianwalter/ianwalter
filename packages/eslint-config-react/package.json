@@ -1,7 +1,7 @@
 {
   "name": "@ianwalter/eslint-config-react",
   "description": "Ian's ESLint configuration for React",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ianwalter/ianwalter.git",
@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.16.3",
-    "@ianwalter/eslint-config": "^6.2.0",
+    "@ianwalter/eslint-config": "^7.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0"
   },

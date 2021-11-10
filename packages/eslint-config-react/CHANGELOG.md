@@ -1,5 +1,22 @@
 # @ianwalter/eslint-config-react
 
+## 5.0.0
+
+### Major Changes
+
+- 88dcd2a: Updating dependencies and moving to monorepo
+- 5c9e280: Removing preact preset
+
+### Patch Changes
+
+- Updated dependencies [436a75a]
+- Updated dependencies [88dcd2a]
+- Updated dependencies [dbf2b26]
+- Updated dependencies [696422f]
+- Updated dependencies [950074e]
+- Updated dependencies [c98a59f]
+  - @ianwalter/eslint-config@7.0.0
+
 ## 4.1.0
 
 ### Minor Changes
