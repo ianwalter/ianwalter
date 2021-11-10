@@ -25,7 +25,7 @@ In `package.json`:
 ## Related
 
 * [`@ianwalter/eslint-config-react`][reactUrl] - Ian's ESLint configuration for
-  React and Preact
+  React
 
 ## License
 

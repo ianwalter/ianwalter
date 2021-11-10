@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/eslint-config-react",
-  "description": "Ian's ESLint configuration for React and Preact",
+  "description": "Ian's ESLint configuration for React",
   "version": "4.1.0",
   "repository": {
     "type": "git",
@@ -32,8 +32,7 @@
   },
   "files": [
     ".eslintrc.json",
-    "index.js",
-    "preact.js"
+    "index.js"
   ],
   "publishConfig": {
     "access": "public"
@@ -45,6 +44,14 @@
     "eslint-plugin-react-hooks": "^4.2.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
     "@ianwalter/bff": "^11.2.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
