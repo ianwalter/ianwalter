@@ -2,7 +2,7 @@
 
 exports[`fail 1`] = `
 Object {
-  "errorCount": 10,
+  "errorCount": 9,
   "fatalErrorCount": 0,
   "filePath": StringContaining "tests/fixtures/fail.js",
   "fixableErrorCount": 6,
@@ -162,17 +162,6 @@ function",
       "ruleId": "camelcase",
       "severity": 2,
     },
-    Object {
-      "column": 20,
-      "endColumn": 27,
-      "endLine": 15,
-      "line": 15,
-      "message": "Identifier 'a_space' is not in camel case.",
-      "messageId": "notCamelCase",
-      "nodeType": "Identifier",
-      "ruleId": "camelcase",
-      "severity": 2,
-    },
   ],
   "source": "function greeting() {
   return \\"Hello\\"
@@ -190,6 +179,7 @@ function a_space () {
 
 export { greeting, a_space }
 ",
+  "usedDeprecatedRules": Array [],
   "warningCount": 1,
 }
 `;
@@ -202,6 +192,7 @@ Object {
   "fixableErrorCount": 0,
   "fixableWarningCount": 0,
   "messages": Array [],
+  "usedDeprecatedRules": Array [],
   "warningCount": 0,
 }
 `;
