@@ -108,18 +108,77 @@ render(
   document.getElementById('app')
 )
 ",
+  "usedDeprecatedRules": Array [],
   "warningCount": 0,
 }
 `;
 
 exports[`pass 1`] = `
 Object {
-  "errorCount": 0,
+  "errorCount": 4,
   "fatalErrorCount": 0,
   "filePath": StringContaining "tests/fixtures/pass.jsx",
   "fixableErrorCount": 0,
   "fixableWarningCount": 0,
-  "messages": Array [],
+  "messages": Array [
+    Object {
+      "column": 10,
+      "endColumn": 11,
+      "endLine": 1,
+      "line": 1,
+      "message": "'h' is defined but never used.",
+      "messageId": "unusedVar",
+      "nodeType": "Identifier",
+      "ruleId": "no-unused-vars",
+      "severity": 2,
+    },
+    Object {
+      "column": 5,
+      "endColumn": 20,
+      "endLine": 5,
+      "line": 5,
+      "message": "'React' must be in scope when using JSX",
+      "messageId": "notInScope",
+      "nodeType": "JSXOpeningElement",
+      "ruleId": "react/react-in-jsx-scope",
+      "severity": 2,
+    },
+    Object {
+      "column": 7,
+      "endColumn": 34,
+      "endLine": 6,
+      "line": 6,
+      "message": "'React' must be in scope when using JSX",
+      "messageId": "notInScope",
+      "nodeType": "JSXOpeningElement",
+      "ruleId": "react/react-in-jsx-scope",
+      "severity": 2,
+    },
+    Object {
+      "column": 7,
+      "endColumn": 44,
+      "endLine": 7,
+      "line": 7,
+      "message": "'React' must be in scope when using JSX",
+      "messageId": "notInScope",
+      "nodeType": "JSXOpeningElement",
+      "ruleId": "react/react-in-jsx-scope",
+      "severity": 2,
+    },
+  ],
+  "source": "import { h, render } from 'preact'
+
+render(
+  (
+    <div id=\\"foo\\" >
+      <span className=\\"greeting\\">Hello, world!</span>
+      <button onClick={() => alert('hi!')}>Click Me</button>
+    </div>
+  ),
+  document.getElementById('app')
+)
+",
+  "usedDeprecatedRules": Array [],
   "warningCount": 0,
 }
 `;

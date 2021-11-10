@@ -39,8 +39,8 @@
     "access": "public"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.16.3",
     "@ianwalter/eslint-config": "^6.2.0",
-    "babel-eslint": "^10.1.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0"
   },
