@@ -1,4 +1,4 @@
-import { h, render } from "preact"
+import react from "React"
 
 render(
   (

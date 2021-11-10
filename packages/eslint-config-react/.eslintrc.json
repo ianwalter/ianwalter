@@ -1,5 +1,12 @@
 {
-  "parser": "babel-eslint",
+  "root": true,
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "extends": [
     "@ianwalter",
     "plugin:react/recommended",
@@ -11,7 +18,7 @@
   ],
   "settings": {
     "react": {
-      "version": "16.8"
+      "version": "17"
     }
   },
   "env": {

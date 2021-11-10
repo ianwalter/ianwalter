@@ -1,16 +1,18 @@
 import { test } from '@ianwalter/bff'
-import { CLIEngine } from 'eslint'
+import eslint from 'eslint'
 
-test('pass', ({ expect }) => {
-  const cli = new CLIEngine({ configFile: 'preact.js' })
+const { ESLint } = eslint
+
+test('pass', async t => {
+  const lint = new ESLint()
   const file = 'tests/fixtures/pass.jsx'
-  const { results: [pass] } = cli.executeOnFiles([file])
-  expect(pass).toMatchSnapshot({ filePath: expect.stringContaining(file) })
+  const [pass] = await lint.lintFiles([file])
+  t.expect(pass).toMatchSnapshot({ filePath: t.expect.stringContaining(file) })
 })
 
-test('fail', ({ expect }) => {
-  const cli = new CLIEngine({ configFile: 'preact.js' })
+test('fail', async t => {
+  const lint = new ESLint()
   const file = 'tests/fixtures/fail.jsx'
-  const { results: [fail] } = cli.executeOnFiles([file])
-  expect(fail).toMatchSnapshot({ filePath: expect.stringContaining(file) })
+  const [fail] = await lint.lintFiles([file])
+  t.expect(fail).toMatchSnapshot({ filePath: t.expect.stringContaining(file) })
 })

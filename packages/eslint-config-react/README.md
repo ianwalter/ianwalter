@@ -1,5 +1,5 @@
 # @ianwalter/eslint-config-react
-> Ian's ESLint configuration for [React][reactUrl] and [Preact][preactUrl]
+> Ian's ESLint configuration for [React][reactUrl]
 
 [![npm page][npmImage]][npmUrl]
 
@@ -22,17 +22,6 @@ In `package.json`, for React:
   }
 ```
 
-For Preact:
-
-```js
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@ianwalter/eslint-config-react/preact"
-    ]
-  }
-```
-
 ## Related
 
 * [`@ianwalter/eslint-config`][configUrl] - Ian's ESLint configuration
@@ -49,7 +38,6 @@ Created by [Ian Walter](https://ianwalter.dev)
 
 [eslintUrl]: https://eslint.org/
 [reactUrl]: https://reactjs.org/
-[preactUrl]: https://preactjs.com/
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/eslint-config-react.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/eslint-config-react
 [configUrl]: https://github.com/ianwalter/ianwalter/blob/main/packages/eslint-config
