@@ -905,7 +905,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.16.0", "@babel/parser@^7.16.2", "@babel/parser@^7.7.2":
+"@babel/parser@^7.12.7", "@babel/parser@^7.14.7", "@babel/parser@^7.16.0", "@babel/parser@^7.7.2":
   version "7.16.2"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.2.tgz#3723cd5c8d8773eef96ce57ea1d9b7faaccd12ac"
   integrity sha512-RUVpT0G2h6rOZwqLDTrKk7ksNv7YpAilTnYe1/Q+eDjxEceRMKVWbCsX7t8h6C1qCFi/1Y8WZjcEPBAFG27GPw==
@@ -1652,7 +1652,7 @@
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/traverse@^7.13.0":
+"@babel/traverse@^7.13.0", "@babel/traverse@^7.16.3":
   version "7.16.3"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.16.3.tgz#f63e8a938cc1b780f66d9ed3c54f532ca2d14787"
   integrity sha512-eolumr1vVMjqevCpwVO99yN/LoGL0EyHiLO5I043aYQvwOJ9eR5UsZSClHVCzfhBduMAsSzgA/6AyqPjNayJag==
