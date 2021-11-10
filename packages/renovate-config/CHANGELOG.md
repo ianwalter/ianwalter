@@ -1,5 +1,11 @@
 # @ianwalter/renovate-config
 
+## 1.4.6
+
+### Patch Changes
+
+- 34f9c25: Fixing package.json info
+
 ## 1.4.5
 
 ### Patch Changes

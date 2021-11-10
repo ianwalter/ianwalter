@@ -1,5 +1,22 @@
 # @ianwalter/eslint-config
 
+## 7.0.0
+
+### Major Changes
+
+- 88dcd2a: Updating dependencies and moving to monorepo
+- dbf2b26: Update dependency eslint-plugin-promise to v5
+- 950074e: Updating eslint to v8
+
+### Minor Changes
+
+- 696422f: Update dependency eslint-plugin-import to ^2.25.2
+- c98a59f: Update dependency eslint-plugin-html to ^6.2.0
+
+### Patch Changes
+
+- 436a75a: Update dependency eslint-config-standard to ^16.0.3
+
 ## 6.2.0
 
 ### Minor Changes
