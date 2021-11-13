@@ -33,7 +33,7 @@
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^12.0.3",
     "@stitches/react": "^1.2.5",
-    "common-tags": "^1.8.0",
+    "common-tags": "^1.8.1",
     "next": "^12.0.3",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
