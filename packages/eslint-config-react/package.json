@@ -41,7 +41,7 @@
     "@babel/eslint-parser": "^7.16.3",
     "@ianwalter/eslint-config": "^7.0.0",
     "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0"
+    "eslint-plugin-react-hooks": "^4.3.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.0",
