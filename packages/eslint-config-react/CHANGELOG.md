@@ -1,5 +1,17 @@
 # @ianwalter/eslint-config-react
 
+## 5.1.0
+
+### Minor Changes
+
+- 38dbcbb: Update dependency eslint-plugin-react to ^7.27.0
+- e72510c: Update dependency eslint-plugin-react-hooks to ^4.3.0
+
+### Patch Changes
+
+- Updated dependencies [534778a]
+  - @ianwalter/eslint-config@7.0.1
+
 ## 5.0.0
 
 ### Major Changes

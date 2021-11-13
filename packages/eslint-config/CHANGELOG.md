@@ -1,5 +1,11 @@
 # @ianwalter/eslint-config
 
+## 7.0.1
+
+### Patch Changes
+
+- 534778a: Update dependency eslint-plugin-import to ^2.25.3
+
 ## 7.0.0
 
 ### Major Changes
