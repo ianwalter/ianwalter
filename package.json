@@ -45,7 +45,7 @@
     "@generates/mister": "^0.0.2",
     "@ianwalter/eslint-config-react": "*",
     "@ianwalter/renovate-config": "*",
-    "eslint-config-next": "^12.0.3"
+    "eslint-config-next": "^12.0.4"
   },
   "eslintConfig": {
     "root": true,
