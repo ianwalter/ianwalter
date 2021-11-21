@@ -1,5 +1,11 @@
 # @ianwalter/mdxtract
 
+## 1.0.3
+
+### Patch Changes
+
+- cd31cf4: Update dependency @babel/parser to ^7.16.4
+
 ## 1.0.2
 
 ### Patch Changes

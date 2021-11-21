@@ -1,5 +1,12 @@
 # @ianwalter/eslint-config-react
 
+## 5.1.1
+
+### Patch Changes
+
+- 7ff06b2: Update dependency @babel/preset-env to ^7.16.4
+- 469e2bc: Update dependency eslint-plugin-react to ^7.27.1
+
 ## 5.1.0
 
 ### Minor Changes
