@@ -46,7 +46,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
-    "@ianwalter/bff": "^11.2.0"
+    "@ianwalter/bff": "^11.2.1"
   },
   "babel": {
     "presets": [
