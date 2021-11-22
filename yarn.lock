@@ -3652,10 +3652,10 @@ axobject-query@^2.2.0:
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
   integrity sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==
 
-azure-devops-node-api@11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/azure-devops-node-api/-/azure-devops-node-api-11.0.1.tgz#b7ec4783230e1de8fc972b23effe7ed2ebac17ff"
-  integrity sha512-YMdjAw9l5p/6leiyIloxj3k7VIvYThKjvqgiQn88r3nhT93ENwsoDS3A83CyJ4uTWzCZ5f5jCi6c27rTU5Pz+A==
+azure-devops-node-api@11.1.0:
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/azure-devops-node-api/-/azure-devops-node-api-11.1.0.tgz#ea3ca49de8583b0366d000f3c3f8a75b8104055f"
+  integrity sha512-6/2YZuf+lJzJLrjXNYEA5RXAkMCb8j/4VcHD0qJQRsgG/KsRMYo0HgDh0by1FGHyZkQWY5LmQyJqCwRVUB3Y7Q==
   dependencies:
     tunnel "0.0.6"
     typed-rest-client "^1.8.4"
@@ -9397,10 +9397,10 @@ remote-origin-url@^1.0.0:
   dependencies:
     parse-git-config "^1.1.1"
 
-renovate@^29.14.0:
-  version "29.14.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-29.14.0.tgz#93fda95643682a20b667822dff9180b137d10b5a"
-  integrity sha512-ZIXk7dAeo58Hdw7e3EaAqYUQDXIkUB5RMVpse67KjQ+r2Kj4ZPNcGEJ8dNGI+6S1SZXtcf1NbME5Wr4Djd+sUw==
+renovate@^29.16.2:
+  version "29.16.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-29.16.2.tgz#4ec1fbf69caec51a901457c56b3999feb5f1b8d9"
+  integrity sha512-atUesXzPL7IzJaW8c6cDQn+2V3tVTVkkXDK9c5JyxmhGQjBjuLHPGDEAdKCRX2A+gBwh8IRoSMvEdY+bVp8znA==
   dependencies:
     "@aws-sdk/client-ec2" "3.35.0"
     "@aws-sdk/client-ecr" "3.38.0"
@@ -9413,7 +9413,7 @@ renovate@^29.14.0:
     "@yarnpkg/core" "2.4.0"
     "@yarnpkg/parsers" "2.4.1"
     auth-header "1.0.0"
-    azure-devops-node-api "11.0.1"
+    azure-devops-node-api "11.1.0"
     bunyan "1.8.15"
     cacache "15.3.0"
     chalk "4.1.2"
