@@ -9431,10 +9431,10 @@ remote-origin-url@^1.0.0:
   dependencies:
     parse-git-config "^1.1.1"
 
-renovate@^29.16.2:
-  version "29.16.2"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-29.16.2.tgz#4ec1fbf69caec51a901457c56b3999feb5f1b8d9"
-  integrity sha512-atUesXzPL7IzJaW8c6cDQn+2V3tVTVkkXDK9c5JyxmhGQjBjuLHPGDEAdKCRX2A+gBwh8IRoSMvEdY+bVp8znA==
+renovate@^29.17.2:
+  version "29.17.2"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-29.17.2.tgz#0e447e84bc730f7ef33494a7dc34f902c3ff7348"
+  integrity sha512-42cpto3tePdXpFpwjHuEQbHEbg0QdFmUMy3orfz9zdRr5jE2gopGLivNB7uUvp6SOofhNw/VR9/r7r8SohfKcA==
   dependencies:
     "@aws-sdk/client-ec2" "3.35.0"
     "@aws-sdk/client-ecr" "3.38.0"
