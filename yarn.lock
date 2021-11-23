@@ -2534,7 +2534,7 @@
     marked-terminal "^4.1.0"
     strip-ansi "^7.0.0"
 
-"@generates/logger@^2.0.3", "@generates/logger@^2.0.4":
+"@generates/logger@^2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@generates/logger/-/logger-2.0.4.tgz#d4e91195000235d3f1c01915a212ceb17d5d6bb7"
   integrity sha512-hyGJ0hFb0lWYTby/igXyIxTE8pL0EOfPY+iBUeaDd+vPQJ+RKj3n02p3vj8z+xCfFukRid4IJ4w0W6EHuNwtWg==
@@ -2575,7 +2575,7 @@
   resolved "https://registry.yarnpkg.com/@generates/number-lines/-/number-lines-0.0.1.tgz#794a6899d2c7180e953477cf46243880a818b210"
   integrity sha512-oTVUBNkvqjue0A6vypGr3Vx2fqBbgSAOx6KS0rsNeUNrUxGb/n15SRC+XSE3AAul8X096vblfBifGqRrBsAlCQ==
 
-"@generates/plug@^1.0.1":
+"@generates/plug@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@generates/plug/-/plug-1.0.2.tgz#1f3efc4acfe64b2f81783e99130790a3bbae5464"
   integrity sha512-YfkCqcS/XswgTylZw0ne2xQkjUB4K+IEHamsc+FM/D5adBgGvAAivRhLgBSwEJZHVVVNq8YJBbnRjBTj9gAZYw==
@@ -2636,15 +2636,15 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@ianwalter/bff@^11.2.1":
-  version "11.2.1"
-  resolved "https://registry.yarnpkg.com/@ianwalter/bff/-/bff-11.2.1.tgz#8013c135b4d0885d7ce2eec803a29b54ab9ade3e"
-  integrity sha512-iAQCpM5ntggBs0EVMcBx9JgJqTmMZSG4+nrb+tfalxexW5J4sZrgXiahHLzi36x5zfnu36sLxFCuoFIO6PrwvA==
+"@ianwalter/bff@^11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@ianwalter/bff/-/bff-11.2.2.tgz#93729cfc5bbf96dd72aabec4f7fa4efbb2c4a1ef"
+  integrity sha512-wW5P1tlZwJXT5EpPwc4Msy3IshafyZL9KcmuK6/X6Zgzw9cHdxfjcO90R706/nNUx7JP+UO7CpS1pNCNZGFoZQ==
   dependencies:
     "@generates/cli" "^2.0.0"
-    "@generates/logger" "^2.0.3"
+    "@generates/logger" "^2.0.4"
     "@generates/merger" "^0.1.3"
-    "@generates/plug" "^1.0.1"
+    "@generates/plug" "^1.0.2"
     "@ianwalter/clone" "^6.0.1"
     "@ianwalter/cloneable" "^2.0.0"
     "@ianwalter/sleep" "^0.0.1"
