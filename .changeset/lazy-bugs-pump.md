@@ -1,5 +1,4 @@
 ---
-"@ianwalter/eslit": minor
 "@ianwalter/eslint-config": minor
 ---
 
