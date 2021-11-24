@@ -65,6 +65,9 @@
   "renovate": {
     "extends": [
       "@ianwalter"
+    ],
+    "ignorePaths": [
+      "archived/*"
     ]
   }
 }
