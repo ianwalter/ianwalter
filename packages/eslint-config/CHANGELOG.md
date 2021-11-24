@@ -1,5 +1,11 @@
 # @ianwalter/eslint-config
 
+## 7.1.0
+
+### Minor Changes
+
+- 2b425fa: Update dependency eslint to ^8.3.0
+
 ## 7.0.1
 
 ### Patch Changes
