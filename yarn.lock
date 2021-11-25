@@ -8464,10 +8464,10 @@ onetime@^6.0.0:
   dependencies:
     mimic-fn "^4.0.0"
 
-openpgp@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/openpgp/-/openpgp-5.0.0.tgz#2da0ee406c8834223ae928a9a214f4811f83f923"
-  integrity sha512-H4Jsj9Bp1KFQ/w520M1d2x45iz9V39Lf+IwIXmUaBmJAMagAt0zanqmWeFzIMJUYmrHTcm6fO/rpc6aftFUHbA==
+openpgp@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/openpgp/-/openpgp-5.0.1.tgz#fe355dcdc2074e505d5c22ee51e880a8296bd0ab"
+  integrity sha512-J9HGIcXumwczJwX3JvgshWYtkhsOJHm5ZPd1ipJ1BqrZL06NgqV/EfJyF3ThOlNV2rY0MGWdS8L8/kKyeo3sXg==
   dependencies:
     asn1.js "^5.0.0"
 
@@ -9513,10 +9513,10 @@ remote-origin-url@^1.0.0:
   dependencies:
     parse-git-config "^1.1.1"
 
-renovate@^29.23.2:
-  version "29.23.2"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-29.23.2.tgz#058564dbc7092ef83dcf898cd80a176f665d40c3"
-  integrity sha512-SeobScPoSEUM+IfemB7q8r46Nb3AqFkyrWxyyPAqmZKZJVaklC3srgUbu4OdQX14itValXSVm8QWFDHFKa4R1A==
+renovate@^29.23.3:
+  version "29.23.3"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-29.23.3.tgz#6b7c2c1d3743da3195eb6596d8145632511ec1b2"
+  integrity sha512-C62nRiTaftVfcG/l8yTtM2SDhLpAEjwdsI+EVoZ85xJjSVT9tR1qUZjfvf1+N7Q1CLJQmgnyqiwfqDKlwX4NVg==
   dependencies:
     "@aws-sdk/client-ec2" "3.35.0"
     "@aws-sdk/client-ecr" "3.38.0"
@@ -9571,7 +9571,7 @@ renovate@^29.23.2:
     minimatch "3.0.4"
     moo "0.5.1"
     node-html-parser "3.3.6"
-    openpgp "5.0.0"
+    openpgp "5.0.1"
     p-all "3.0.0"
     p-map "4.0.0"
     p-queue "6.6.2"
