@@ -7,7 +7,6 @@ async function run () {
   // const posts = await getPosts()
   // const latest = posts.reverse().slice(0, 5)
   const intro = await fs.readFile(path.join('./static/intro.mdx'), 'utf-8')
-  const index = await fs.readFile(path.join('./pages/index.mdx'), 'utf-8')
   const readme = stripIndents`
     This repo ([ianwalter/ianwalter](https://github.com/ianwalter/ianwalter))
     contains my personal website at
