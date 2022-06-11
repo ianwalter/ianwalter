@@ -11,7 +11,7 @@ export default function Footer () {
         textAlign: 'center'
       }}
     >
-      Copyright © 2020 Ian Walter
+      Copyright © Ian Walter
     </StyledEl>
   )
 }

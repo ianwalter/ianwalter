@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "lint": "eslint .",
-    "gen:readme": "node scripts/generateReadme",
+    "gen.readme": "node scripts/generateReadme",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

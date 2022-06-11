@@ -1,20 +1,20 @@
 const path = require('path')
 const { promises: fs } = require('fs')
-const { stripIndent } = require('common-tags')
+const { stripIndents } = require('common-tags')
 // const getPosts = require('../lib/getPosts')
-
-const pagesPath = path.join(__dirname, '../pages')
-const intro = stripIndent`
-  This repo ([ianwalter/ianwalter](https://github.com/ianwalter/ianwalter))
-  contains my personal website at
-  [https://ianwalter.dev](https://ianwalter.dev).
-`
 
 async function run () {
   // const posts = await getPosts()
   // const latest = posts.reverse().slice(0, 5)
-  const index = await fs.readFile(path.join(pagesPath, 'index.mdx'), 'utf-8')
-  const readme = index.slice(index.indexOf('#')).replace('<Intro />', intro)
+  const intro = await fs.readFile(path.join('./static/intro.mdx'), 'utf-8')
+  const index = await fs.readFile(path.join('./pages/index.mdx'), 'utf-8')
+  const readme = stripIndents`
+    This repo ([ianwalter/ianwalter](https://github.com/ianwalter/ianwalter))
+    contains my personal website at
+    [https://ianwalter.dev](https://ianwalter.dev).
+
+    ${intro.slice(intro.indexOf('#'))}
+  `
 
   // const readme = stripIndents`
   //   ${title}
