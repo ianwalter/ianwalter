@@ -30,7 +30,7 @@
     "@generates/swag": "^1.1.0",
     "@ianwalter/mdxtract": "^1.0.1",
     "@mapbox/rehype-prism": "^0.8.0",
-    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/loader": "^2.1.5",
     "@next/mdx": "^12.0.4",
     "@stitches/react": "^1.2.5",
     "common-tags": "^1.8.2",
