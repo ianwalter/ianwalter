@@ -42,7 +42,7 @@
     "@babel/generator": "^7.12.5",
     "@babel/parser": "^7.16.4",
     "@babel/traverse": "^7.16.3",
-    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/mdx": "^2.1.5",
     "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
