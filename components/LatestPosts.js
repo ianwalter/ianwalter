@@ -1,6 +1,5 @@
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { StyledEl } from '@generates/swag'
-import Link from '../components/Link.js'
 
 export default function LatestPosts (props) {
   return (
@@ -13,11 +12,9 @@ export default function LatestPosts (props) {
       <StyledEl as="ul" css={{ paddingLeft: '1.5rem', color: '$blueGray400' }}>
         {props.posts && props.posts.map(post => (
           <StyledEl as="li" key={post.url} css={{ my: '.25rem' }}>
-            <NextLink href={post.url} passHref>
-              <Link css={{ fontWeight: '500' }}>
-                {post.title}
-              </Link>
-            </NextLink>
+            <Link href={post.url} className="text-sky-300">
+              {post.title}
+            </Link>
           </StyledEl>
         ))}
       </StyledEl>

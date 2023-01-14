@@ -8,6 +8,7 @@ import Layout from '../components/Layout.js'
 import Link from '../components/Link.js'
 import CodeCaption from '../components/CodeCaption.js'
 import InlineCode from '../components/InlineCode.js'
+import '../styles.css'
 
 const globalStyles = globalCss({
   body: {
@@ -75,7 +76,7 @@ const components = {
   },
   a: function A (props) {
     return <Link
-      rel={props.href.indexOf('http') === 0 && 'noopener'}
+      {...props.href.indexOf('http') === 0 && { rel: 'noopener' }}
       {...props}
     />
   },
