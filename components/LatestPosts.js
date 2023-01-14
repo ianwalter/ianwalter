@@ -12,7 +12,7 @@ export default function LatestPosts (props) {
       <StyledEl as="ul" css={{ paddingLeft: '1.5rem', color: '$blueGray400' }}>
         {props.posts && props.posts.map(post => (
           <StyledEl as="li" key={post.url} css={{ my: '.25rem' }}>
-            <Link href={post.url} className="text-sky-300">
+            <Link href={post.url} className="text-sky-200 font-medium">
               {post.title}
             </Link>
           </StyledEl>

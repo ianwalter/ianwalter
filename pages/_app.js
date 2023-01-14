@@ -21,10 +21,6 @@ const globalStyles = globalCss({
       "Lucida Grande",
       sans-serif
     `,
-    backgroundColor: '$trueGray900',
-    fontSize: '1.25rem',
-    color: '$coolGray100',
-    lineHeight: '1.75',
     textRendering: 'optimizeLegibility',
     '-webkit-font-smoothing': 'antialiased',
     '-moz-osx-font-smoothing': 'grayscale'
