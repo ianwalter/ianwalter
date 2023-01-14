@@ -6,4 +6,4 @@ contains my personal website at
 
 I'm interested in organizing people around building extraordinary software.
 My experience allows me to understand complex software systems and team
-dynamics. I’ve built and managed products that have served millions of people.
+dynamics. I’ve helped build products that have served millions of people.
