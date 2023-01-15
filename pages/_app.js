@@ -3,29 +3,11 @@ import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
 import Router from 'next/router'
 import nprogress from 'nprogress'
-import { globalCss } from '@generates/swag'
 import Layout from '../components/Layout.js'
 import CodeCaption from '../components/CodeCaption.js'
 import InlineCode from '../components/InlineCode.js'
 import PostDate from '../components/PostDate.js'
 import linkStyle from '../styles/linkStyle.js'
-
-const globalStyles = globalCss({
-  body: {
-    fontFamily: `
-      "Inter var",
-      "Helvetica Neue Light",
-      "Helvetica Neue",
-      Helvetica,
-      Arial,
-      "Lucida Grande",
-      sans-serif
-    `,
-    textRendering: 'optimizeLegibility',
-    '-webkit-font-smoothing': 'antialiased',
-    '-moz-osx-font-smoothing': 'grayscale'
-  }
-})
 
 nprogress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => nprogress.start())
