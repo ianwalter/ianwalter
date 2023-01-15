@@ -3,10 +3,7 @@
 @import 'tailwindcss/utilities';
 
 body {
-  background-color: var(--colors-trueGray900);
-  color: var(--colors-coolGray100);
   font-size: 1.25rem;
-  line-height: 2;
 }
 
 h1, h2, h3 {
