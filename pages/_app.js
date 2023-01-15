@@ -7,6 +7,7 @@ import { globalCss } from '@generates/swag'
 import Layout from '../components/Layout.js'
 import CodeCaption from '../components/CodeCaption.js'
 import InlineCode from '../components/InlineCode.js'
+import PostDate from '../components/PostDate.js'
 import linkStyle from '../styles/linkStyle.js'
 
 const globalStyles = globalCss({
@@ -87,7 +88,8 @@ const components = {
     />
   },
   inlineCode: InlineCode,
-  CodeCaption
+  CodeCaption,
+  PostDate
 }
 
 export default function App ({ Component, pageProps }) {

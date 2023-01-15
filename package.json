@@ -37,6 +37,7 @@
     "autoprefixer": "^10.4.13",
     "clsx": "^1.2.1",
     "common-tags": "^1.8.2",
+    "date-fns": "^2.29.3",
     "next": "^13.1.2",
     "nprogress": "^0.2.0",
     "postcss": "^8.4.21",
