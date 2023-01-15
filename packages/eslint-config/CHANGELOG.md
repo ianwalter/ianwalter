@@ -1,5 +1,11 @@
 # @ianwalter/eslint-config
 
+## 7.2.0
+
+### Minor Changes
+
+- 5720299: Update eslint to 8.32.0
+
 ## 7.1.0
 
 ### Minor Changes
