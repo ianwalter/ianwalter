@@ -9,8 +9,8 @@ const withMDX = require('@next/mdx')({
 const deconstructFilename = require('./lib/deconstructFilename')
 
 function toRewrite (filename) {
-  const { file, slug } = deconstructFilename(filename)
-  return { source: `/${slug}`, destination: `/posts/${file}` }
+  const { slug } = deconstructFilename(filename)
+  return { source: `/${slug}`, destination: `/posts/${slug}` }
 }
 
 module.exports = withMDX({
