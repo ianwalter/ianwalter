@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/renovate-config",
-  "version": "1.4.6",
+  "version": "1.5.0",
   "description": "Ian's Renovate config preset",
   "main": "package.json",
   "scripts": {
@@ -83,7 +83,9 @@
           "groupName": "React"
         }
       ],
-      "ignorePaths": ["**/archived/**"],
+      "ignorePaths": [
+        "**/archived/**"
+      ],
       "reviewers": []
     }
   }
