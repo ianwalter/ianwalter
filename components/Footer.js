@@ -1,17 +1,7 @@
-import { StyledEl } from '@generates/swag'
-
 export default function Footer () {
   return (
-    <StyledEl
-      css={{
-        marginTop: '8rem',
-        marginBottom: '3rem',
-        color: '$coolGray400',
-        fontSize: '0.875rem',
-        textAlign: 'center'
-      }}
-    >
+    <div className="mt-16 mb-8 text-zinc-400 text-sm text-center">
       Copyright © Ian Walter
-    </StyledEl>
+    </div>
   )
 }

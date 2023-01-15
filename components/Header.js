@@ -1,49 +1,38 @@
 import Link from 'next/link'
-import { GrGithub, GrTwitter } from 'react-icons/gr'
-import { StyledEl } from '@generates/swag'
+import clsx from 'clsx'
+import { SiGithub, SiMastodon } from 'react-icons/si'
+import transitionStyles from '../styles/transitionStyles.js'
 
 export default function Header () {
   return (
-    <StyledEl css={{ display: 'flex', alignItems: 'center' }}>
+    <div className="flex items-center">
 
-      <Link href="/" passHref>
-        <StyledEl as="a" css={{ textDecoration: 'none' }}>
-          <StyledEl
-            as="h1"
-            css={{ fontSize: '24px', color: '$emerald200', margin: 0 }}
-          >
-            Ian Walter
-          </StyledEl>
-        </StyledEl>
+      <Link href="/">
+        <h1 className="font-bold text-emerald-200 text-2xl my-4">
+          Ian Walter
+        </h1>
       </Link>
 
-      <StyledEl
-        css={{
-          display: 'flex',
-          alignItems: 'center',
-          marginLeft: 'auto',
-          color: '$blueGray400'
-        }}
-      >
+      <div className="flex items-center ml-auto text-slate-300">
 
-        <StyledEl>
-          <Link href="https://github.com/ianwalter" passHref>
-            <StyledEl as="a" aria-label="GitHub" css={{ color: 'inherit' }}>
-              <GrGithub style={{ display: 'block' }} />
-            </StyledEl>
-          </Link>
-        </StyledEl>
+        <Link
+          href="https://github.com/ianwalter"
+          aria-label="GitHub"
+          className={clsx(transitionStyles, 'hover:text-slate-400')}
+        >
+          <SiGithub style={{ display: 'block' }} />
+        </Link>
 
-        <StyledEl css={{ marginLeft: '1.5rem' }}>
-          <Link href="https://twitter.com/IanWalter" passHref>
-            <StyledEl as="a" aria-label="Twitter" css={{ color: 'inherit' }}>
-              <GrTwitter style={{ display: 'block' }} />
-            </StyledEl>
-          </Link>
-        </StyledEl>
+        <Link
+          href="https://mas.to/@ianwalter"
+          aria-label="Mastodon"
+          className={clsx(transitionStyles, 'hover:text-slate-400 ml-6')}
+        >
+          <SiMastodon style={{ display: 'block' }} />
+        </Link>
 
-      </StyledEl>
+      </div>
 
-    </StyledEl>
+    </div>
   )
 }

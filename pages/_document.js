@@ -1,9 +1,13 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import clsx from 'clsx'
 
 export default class SiteDocument extends Document {
   render () {
     return (
-      <Html lang="en">
+      <Html
+        lang="en"
+        className={clsx('bg-zinc-900 text-zinc-100 leading-9')}
+      >
         <Head>
           <link
             rel="preload"

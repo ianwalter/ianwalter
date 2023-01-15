@@ -1,29 +1,18 @@
-import { StyledEl } from '@generates/swag'
 import Header from './Header.js'
 import Footer from './Footer.js'
 
 export default function Layout (props) {
   return (
-    <StyledEl
-      css={{
-        maxWidth: '56rem',
-        mx: 'auto',
-        paddingTop: '2rem',
-        px: '1.5rem',
-        '@lg': {
-          px: 0
-        }
-      }}
-    >
+    <div className="max-w-4xl mx-auto pt-8 px-6 lg:px-0">
 
       <Header />
 
-      <StyledEl as="main" css={{ marginTop: '2.5rem' }}>
+      <div as="main" className="mt-10">
         {props.children}
-      </StyledEl>
+      </div>
 
       <Footer />
 
-    </StyledEl>
+    </div>
   )
 }
