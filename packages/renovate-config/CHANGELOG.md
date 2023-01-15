@@ -1,5 +1,11 @@
 # @ianwalter/renovate-config
 
+## 1.5.0
+
+### Minor Changes
+
+- 36cbb18: Ignoring archived directory
+
 ## 1.4.6
 
 ### Patch Changes
