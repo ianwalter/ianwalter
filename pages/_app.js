@@ -75,8 +75,6 @@ const components = {
 }
 
 export default function App ({ Component, pageProps }) {
-  globalStyles()
-
   return (
     <MDXProvider components={components}>
       <Component {...pageProps} />
