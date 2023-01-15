@@ -179,6 +179,7 @@ function a_space () {
 
 export { greeting, a_space }
 ",
+  "suppressedMessages": Array [],
   "usedDeprecatedRules": Array [],
   "warningCount": 1,
 }
@@ -192,6 +193,7 @@ Object {
   "fixableErrorCount": 0,
   "fixableWarningCount": 0,
   "messages": Array [],
+  "suppressedMessages": Array [],
   "usedDeprecatedRules": Array [],
   "warningCount": 0,
 }
