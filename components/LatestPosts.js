@@ -1,24 +1,25 @@
 import Link from 'next/link'
-import { StyledEl } from '@generates/swag'
+import clsx from 'clsx'
+import linkStyle from '../styles/linkStyle.js'
 
 export default function LatestPosts (props) {
   return (
-    <StyledEl css={{ marginTop: '2.5rem' }}>
+    <div css={{ marginTop: '2.5rem' }}>
 
-      <StyledEl as="h2" css={{ margin: 0, fontSize: '30px' }}>
+      <h2 className="text-3xl font-semibold" css={{ margin: 0, fontSize: '30px' }}>
         My latest posts 💬
-      </StyledEl>
+      </h2>
 
-      <StyledEl as="ul" css={{ paddingLeft: '1.5rem', color: '$blueGray400' }}>
+      <ul className="pl-5 my-6 list-disc">
         {props.posts && props.posts.map(post => (
-          <StyledEl as="li" key={post.url} css={{ my: '.25rem' }}>
-            <Link href={post.url} className="text-sky-200 font-medium">
+          <li key={post.url}className="my-1">
+            <Link href={post.url} className={clsx(linkStyle, 'font-medium')}>
               {post.title}
             </Link>
-          </StyledEl>
+          </li>
         ))}
-      </StyledEl>
+      </ul>
 
-    </StyledEl>
+    </div>
   )
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { GrGithub, GrTwitter } from 'react-icons/gr'
+import { GrGithub } from 'react-icons/gr'
 import { StyledEl } from '@generates/swag'
 
 export default function Header () {
@@ -7,12 +7,11 @@ export default function Header () {
     <StyledEl css={{ display: 'flex', alignItems: 'center' }}>
 
       <Link href="/">
-        <StyledEl
-          as="h1"
-          css={{ fontSize: '24px', color: '$emerald200', margin: 0 }}
+        <h1
+          className="font-bold text-emerald-200 text-2xl my-4"
         >
           Ian Walter
-        </StyledEl>
+        </h1>
       </Link>
 
       <StyledEl

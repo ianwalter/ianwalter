@@ -3,12 +3,11 @@ import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
 import Router from 'next/router'
 import nprogress from 'nprogress'
-import { globalCss, StyledEl } from '@generates/swag'
+import { globalCss } from '@generates/swag'
 import Layout from '../components/Layout.js'
-import Link from '../components/Link.js'
 import CodeCaption from '../components/CodeCaption.js'
 import InlineCode from '../components/InlineCode.js'
-import '../styles.css'
+import linkStyle from '../styles/linkStyle.js'
 
 const globalStyles = globalCss({
   body: {
@@ -51,33 +50,41 @@ const components = {
     )
   },
   h1: function H1 (props) {
-    return <StyledEl
-      as="h1"
-      css={{ lineHeight: '1.2', fontSize: '2.25rem', my: '1.5rem' }}
+    return <h1
+      className="text-4xl my-6 font-bold"
       {...props}
     />
   },
   h2: function H2 (props) {
-    return <StyledEl
-      as="h2"
-      css={{ lineHeight: '1.2', fontSize: '1.875rem', my: '1.5rem' }}
+    return <h2
+      className="text-3xl font-semibold my-6"
       {...props}
     />
   },
   h3: function H3 (props) {
-    return <StyledEl as="h3" size="md" css={{ my: '1.5rem' }} {...props} />
+    return <h3
+      className="text-2xl font-semibold my-6"
+      {...props}
+    />
   },
   p: function P (props) {
-    return <StyledEl as="p" css={{ my: '1.5rem' }} {...props} />
+    return <p
+      className="my-6"
+      {...props}
+    />
   },
   a: function A (props) {
-    return <Link
+    return <a
+      className={linkStyle}
       {...props.href.indexOf('http') === 0 && { rel: 'noopener' }}
       {...props}
     />
   },
   ul: function Ul (props) {
-    return <StyledEl as="ul" {...props} />
+    return <ul
+      className="pl-5 my-6 list-disc"
+      {...props}
+    />
   },
   inlineCode: InlineCode,
   CodeCaption
