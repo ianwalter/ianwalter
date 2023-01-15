@@ -6,7 +6,7 @@ export default class SiteDocument extends Document {
     return (
       <Html
         lang="en"
-        className={clsx('bg-zinc-900 text-zinc-100 leading-10')}
+        className={clsx('bg-zinc-900 text-zinc-100 leading-9')}
       >
         <Head>
           <link
