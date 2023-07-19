@@ -15,11 +15,11 @@ jobs:
           # generate changelogs with the correct commits.
           fetch-depth: 0
       - name: Install
-        run: yarn
+        run: pnpm
       - name: Changesets
         uses: changesets/action@21240c3cd1d2efa2672d64e0235a03cf139b83e6
         with:
-          publish: yarn changeset publish
+          publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
