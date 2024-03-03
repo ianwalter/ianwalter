@@ -33,7 +33,7 @@
     "url": "https://github.com/sponsors/ianwalter"
   },
   "devDependencies": {
-    "renovate": "^34.102.7"
+    "renovate": "^34.160.0"
   },
   "renovate-config": {
     "default": {
