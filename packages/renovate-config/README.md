@@ -6,7 +6,7 @@
 ## Installation
 
 ```console
-yarn add @ianwalter/renovate-config --dev
+pnpm add @ianwalter/renovate-config --dev
 ```
 
 ## Usage
