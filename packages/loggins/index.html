@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loggins Test Page</title>
+  <script type="module" src="./dist/test-app.js"></script>
+</head>
+<body>
+  <h1>Loggins Test Page</h1>
+  <div>
+    <button id="log-error">Log Error</button>
+    <button id="log-warn">Log Warning</button>
+    <button id="log-info">Log Info</button>
+    <button id="log-debug">Log Debug</button>
+    <button id="log-trace">Log Trace</button>
+  </div>
+  <div>
+    <button id="toggle-pretty">Toggle Pretty Print</button>
+    <button id="change-level">Change Log Level</button>
+    <button id="add-transport">Add Test Transport</button>
+  </div>
+  <div id="transport-log" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px; max-height: 200px; overflow-y: auto;">
+    <h3>Transport Log Output:</h3>
+  </div>
+</body>
+</html>

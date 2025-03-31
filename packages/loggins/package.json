@@ -1,0 +1,20 @@
+{
+  "name": "@ianwalter/loggins",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "bun test tests/unit/logger.test.ts",
+    "test:e2e": "playwright test",
+    "serve": "bun build:test && bun serve.ts",
+    "build": "bun build --target browser index.ts --outdir ./dist",
+    "build:test": "bun build --target browser test-app.ts --outdir ./dist"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/bun": "latest",
+    "playwright": "^1.40.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
