@@ -1,0 +1,11 @@
+[install]
+# Configure hoisting for monorepo use
+hoist = true
+
+[install.cache]
+# Enable shared cache for all workspaces
+dir = "node_modules/.cache"
+
+[test]
+# Bun test configuration
+coverageThreshold = 80

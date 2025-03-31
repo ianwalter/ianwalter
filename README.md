@@ -1,6 +1,22 @@
 This repo ([ianwalter/ianwalter](https://github.com/ianwalter/ianwalter))
 contains my personal website at
-[https://ianwalter.dev](https://ianwalter.dev).
+[https://ianwalter.dev](https://ianwalter.dev) and various npm packages.
+
+## Repository Structure
+
+- `apps/site` - Personal website at [https://ianwalter.dev](https://ianwalter.dev)
+- `packages/` - Published npm packages
+- `archived/` - Archived projects
+
+## Development
+
+```bash
+# Install dependencies
+bun install
+
+# Run the website
+cd apps/site && bun dev
+```
 
 # Hi, I'm Ian! 👋
 

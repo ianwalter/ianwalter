@@ -1,0 +1,43 @@
+{
+  "name": "site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@generates/swag": "^1.1.0",
+    "@ianwalter/mdxtract": "^1.0.1",
+    "@mapbox/rehype-prism": "^0.8.0",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^12.0.4",
+    "@stitches/react": "^1.2.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.13",
+    "clsx": "^1.2.1",
+    "common-tags": "^1.8.2",
+    "next": "^13.1.2",
+    "nprogress": "^0.2.0",
+    "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.3.1",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "@ianwalter/eslint-config-react": "*",
+    "eslint-config-next": "^12.0.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@ianwalter/react"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": 0,
+      "react/prop-types": 0
+    }
+  }
+}
